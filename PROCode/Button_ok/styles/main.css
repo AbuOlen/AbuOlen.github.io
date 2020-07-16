@@ -1,0 +1,25 @@
+.button {
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  color: rgb(20, 19, 19);
+  background-image: linear-gradient(to right, #f9f7f8, #f4c6a9, #d88247);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #F4C6A9, #D88247, #6F4124);
+}
+
+.button:active {
+  background-image: linear-gradient(to right, #f9f7f8, #88d8b9, #63a8a5);
+  box-shadow: 0 2px #666;
+  transform: translateY(5px);
+}
