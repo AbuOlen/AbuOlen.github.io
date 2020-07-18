@@ -1,0 +1,21 @@
+.board {
+    height: 640px !important;
+    border: 2px solid black;
+}
+
+div:nth-child(2n) {
+    width: 640px;
+    height: 80px;
+    background: linear-gradient(to right, 
+     white 12.5%, black 12.5% 25%, white 25% 37.5%, black 37.5% 50%, white 50% 62.5%, black 62.5% 75%, white 75% 87.5%, black 87.5% 100%);
+}
+
+div:nth-child(2n+1) {
+    width: 640px;
+    height: 80px;
+
+    background: linear-gradient(to left, 
+    white 12.5%, black 12.5% 25%, white 25% 37.5%, black 37.5% 50%, white 50% 62.5%, black 62.5% 75%, white 75% 87.5%, black 87.5% 100%);
+}
+
+
