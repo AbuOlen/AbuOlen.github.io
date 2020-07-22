@@ -1,0 +1,51 @@
+.logo {
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+header {   
+    height: 100px;
+    background-color: powderblue;   
+    font-size: 1.5rem;
+}
+
+nav {
+    margin-top: 15px;
+    margin-right: 140px;
+    max-width: 1000px;
+    float: right;  
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+ul .submenu li{
+    display: none;
+    line-height: 1.8;
+}
+
+.submenu {
+    position: absolute;
+    padding-left: 0;
+    background-color: white; 
+}
+
+nav>ul>li:hover .submenu li{
+    display: block;
+}
+
+.submenu li:hover  a::before {
+    content: "☂";
+}
+
+.submenu li:hover  a::after {
+    content: " long text";
+    text-overflow: clip;
+}
+
+.info {
+    margin: 30px;
+}
