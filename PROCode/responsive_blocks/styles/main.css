@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.div1 {
+    background-color: cornflowerblue;
+    position: absolute;
+    padding: 0;
+   
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 5rem;
+    object-fit: contain;
+    
+}
+.article {
+    background-color: bisque;
+    text-align: center;
+    float: right;
+}
+.article p {
+    padding: 1.5rem;
+}

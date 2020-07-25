@@ -1,0 +1,23 @@
+@media (min-width: 770px) {
+    
+    .div1 {
+        width: 30%;
+    }
+    .article {
+        width: 70%;
+    }
+}
+
+@media (max-width: 769px) {
+ 
+    .div1 {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+       
+    }
+    .logo {
+        margin:0;
+        object-fit: cover;
+    }
+}
