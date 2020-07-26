@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@740&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap");
+
+body {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  max-height: 800px;
+  position: absolute;
+  background-color: #b9d6ef;
+  background-size: cover;
+}
+
+.upper_pic {
+  height: 465px;
+  max-width: 980px;
+  position: relative;
+  margin: auto;
+}
+.cloud1 {
+  display: inline-block;
+  margin-left: 130px;
+}
+.cloud2 {
+  position: relative;
+  float: right;
+  right: 23px;
+}
+
+.clouds {
+  margin-right: 70px;
+}
+
+.coming_soon {
+  margin-top: 32px;
+  font-size: 68px;
+  text-align: center;
+  
+  
+  font-family: "Raleway", sans-serif;
+  color: #fefefe;
+  /* text-shadow: 3px 2px #9ab1c4; */
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.17);
+  letter-spacing: 0.02em;
+}
+
+.subscribe {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #2b6c95;
+  font-family: "Exo 2", sans-serif;
+  letter-spacing: 0.04em;
+}
+.container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 240px;
+  height: 35px;
+  box-shadow: inset 1px 1px 3px #e7e7e7, 1px 1px 3px #e7e7e7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding-left: 12px;
+  margin-right: 7px;
+  border-radius: 3px;
+  border: transparent;
+}
+
+.btn {
+  width: 90px;
+  height: 35px;
+  background-image: linear-gradient(to top, #f5941e, #f8ba33);
+  border: 1px solid #faaa22;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #db9935;
+  letter-spacing: -0.04em;
+  opacity: 0.85;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.aicberg {
+  position: absolute;
+  width: 980px;
+  margin-top: 25px;
+  padding-left: 320px;
+}
+
+.boat {
+  position: absolute;
+  width: 980px;
+  margin-top: 198px;
+  padding-left: 296px;
+}
+
+.white_line {
+  height: 4px;
+  background-color: white;
+}
+
+.blue_line {
+  height: 7px;
+  background-color: #266b97;
+}
+
+.timer {
+  position: relative;
+  top: 255px;
+  height: 150px;
+  width: 980px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.lower_pic {
+  min-height: 600px;
+  background-color: #1f5785;
+}
+
+.numbers {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #b9d6ef;
+  display: flex;
+  justify-content: center;
+  line-height: 65px;
+  font-size: 24px;
+  color: #2b6c95;
+  font-family: "Exo 2", sans-serif;
+  margin: auto;
+}
+
+.days,
+.hours,
+.mins {
+  display: inline-block;
+  margin: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+}
+
+p {
+  margin-top: 8px;
+  width: 30px;
+  color: white;
+}
