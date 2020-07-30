@@ -1,6 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@740&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap");
+@font-face {
+  font-family: "Houschka_Pro_Bold";
+  src: url(../fonts/HouschkaPro-Bold.otf);
+}
+@font-face {
+  font-family: "Houschka_Pro_Medium";
+  src: url(../fonts/HouschkaPro-Medium.otf);
+}
 
+@keyframes mymove {
+  from {
+    transform: rotate(1.5deg);
+  }
+  to {
+    transform: rotate(-1.5deg);
+  }
+}
 body {
   width: 100%;
 }
@@ -23,14 +37,16 @@ body {
   position: relative;
   margin: auto;
 }
+
 .cloud1 {
   display: inline-block;
-  margin-left: 130px;
+  margin-left: 109px;
 }
+
 .cloud2 {
   position: relative;
   float: right;
-  right: 23px;
+  right: 46px;
 }
 
 .clouds {
@@ -38,39 +54,34 @@ body {
 }
 
 .coming_soon {
-  margin-top: 32px;
-  font-size: 68px;
-  text-align: center;
-  
-  
-  font-family: "Raleway", sans-serif;
-  color: #fefefe;
-  /* text-shadow: 3px 2px #9ab1c4; */
+  margin-top: 38px;
+  font-size: 72px;
+  margin-left: 218px;
+  font-family: "Houschka_Pro_Bold";
+  color: rgb(254, 254, 254);
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.17);
-  letter-spacing: 0.02em;
 }
 
 .subscribe {
-  margin-top: 10px;
+  margin-left: 322px;
   font-size: 14px;
-  text-align: center;
   color: #2b6c95;
-  font-family: "Exo 2", sans-serif;
-  letter-spacing: 0.04em;
+  font-family: "Houschka_Pro_Medium";
+  
 }
 .container {
   margin-top: 20px;
-  text-align: center;
+  margin-left: 296px;
 }
 
 input[type="text"] {
-  width: 240px;
+  width: 241px;
   height: 35px;
   box-shadow: inset 1px 1px 3px #e7e7e7, 1px 1px 3px #e7e7e7;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   padding-left: 12px;
-  margin-right: 7px;
+  margin-right: 55px;
   border-radius: 3px;
   border: transparent;
 }
@@ -81,6 +92,7 @@ input[type="text"] {
   background-image: linear-gradient(to top, #f5941e, #f8ba33);
   border: 1px solid #faaa22;
   border-radius: 3px;
+  margin-left: -50px;
   cursor: pointer;
   color: #ffffff;
   font-size: 13px;
@@ -99,14 +111,16 @@ input[type="text"] {
   position: absolute;
   width: 980px;
   margin-top: 25px;
-  padding-left: 320px;
+  padding-left: 301px;
 }
 
 .boat {
   position: absolute;
   width: 980px;
   margin-top: 198px;
-  padding-left: 296px;
+  padding-left: 276px;
+  animation: mymove 3s infinite;
+  animation-direction: alternate;
 }
 
 .white_line {
@@ -116,49 +130,74 @@ input[type="text"] {
 
 .blue_line {
   height: 7px;
-  background-color: #266b97;
+  background-color: rgb(50, 125, 173);
 }
 
 .timer {
   position: relative;
   top: 255px;
+  left: 307px;
   height: 150px;
-  width: 980px;
+  width: 320px;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  padding-top: 18px;
 }
 
 .lower_pic {
   min-height: 600px;
-  background-color: #1f5785;
+  background-color: rgb(38, 107, 151);
 }
 
 .numbers {
-  width: 70px;
-  height: 70px;
+  width: 71px;
+  height: 71px;
   border-radius: 50%;
   background-color: #b9d6ef;
   display: flex;
   justify-content: center;
-  line-height: 65px;
+  line-height: 77px; 
   font-size: 24px;
   color: #2b6c95;
-  font-family: "Exo 2", sans-serif;
-  margin: auto;
+  font-family: "Houschka_Pro_Medium";
+  margin: 0 auto;
 }
 
 .days,
 .hours,
 .mins {
-  display: inline-block;
-  margin: 20px;
-  font-family: "Raleway", sans-serif;
-  font-size: 22px;
+  position: absolute;
+  font-family: "Houschka_Pro_Bold";
+  font-size: 25px;
+  margin-top: 1px;
+}
+
+.days {
+  margin-left: 12px;
+}
+
+.hours {
+  margin-left: 126px;
+}
+
+.mins {
+  margin-left: 234px;
 }
 
 p {
-  margin-top: 8px;
-  width: 30px;
+  width: 32px;
   color: white;
+  margin-top: 8px;
+  letter-spacing: -1px;
+}
+
+.days > p {
+  margin-left: 5px;
+}
+
+.hours > p {
+  margin-left: -9px;  
+}
+
+.mins > p {
+  margin-left: 7px;
 }
