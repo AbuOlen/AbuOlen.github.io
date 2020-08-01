@@ -1,0 +1,138 @@
+.main {
+    width: 1316px;
+    height: 1425px;
+    background-color: #f6f7fb;
+}
+
+.header {
+    height: 89px;
+    width: 1316px;
+   
+}
+.buttons {
+    width: 1000px;
+    height: 49px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid rgb(128, 0, 107);
+
+}
+
+.nick {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    right: 350px;
+    top: 10px;
+
+}
+
+.short_info {
+    height: 90px;
+    display: flex;
+    
+    align-items: center;
+    border: 1px solid green;
+   
+}
+.currency {
+    width: 929px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.button_currency {
+    width: 187px;
+    height: 40px;
+    
+}
+
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    height: 436px;
+    border: 1px solid rgb(0, 98, 128);
+
+}
+
+.summary {
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    border: 1px solid rgb(128, 0, 28);
+
+}
+.summary_item {
+    width: 110px;
+    height: 53px;
+    border: 1px solid rgb(128, 126, 0);
+}
+
+.block_info {
+    width: 290px;
+    height: 163px;
+    border: 1px solid rgb(0, 98, 128);
+    padding: 0;
+}
+
+.hesh_rating {
+    width: 290px;
+    height: 36px;
+    display: flex;
+    border: 1px solid rgb(0, 98, 128);
+}
+.balance {
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(128, 126, 0);
+}
+
+.prediction {
+    width: 303px;
+    height: 289px;
+    
+    border: 1px solid rgb(0, 98, 128);
+}
+
+.statistic {
+    height: 380px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(0, 98, 128);
+}
+.statistic_buttons {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0, 98, 128);
+}
+.statistic_account {
+    width: 915px;
+    height: 273px;
+    border: 1px solid rgb(0, 98, 128);
+}
+
+.statistic_tab {
+    width: 915px;
+    height: 213px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(0, 98, 128);
+}
+.my_contracts {
+    width: 303px;
+    
+    border: 1px solid rgb(0, 98, 128);
+}
+.contract {
+    width: 303px;
+    height: 66px;
+    border: 1px solid rgb(0, 98, 128);
+}
+p {
+    margin: 0;
+}
