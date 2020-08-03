@@ -1,235 +1,362 @@
 @font-face {
-    font-family: "Raleway";
-    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+  font-family: "Raleway";
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
 }
-
 
 .main {
-    width: 1314px;
-    height: 1425px;
-    background-color: #f6f7fb;
+  width: 1314px;
+  height: 1425px;
+  background-color: rgb(241, 237, 237);
 }
+
+/* ---------header----------- */
 
 .header {
-    height: 89px;
-    width: 1300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 15px;
-    background-color: white;
-    border: 1px solid rgb(16, 130, 175);
-
+  height: 89px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+  background-color: white;
+  
 }
 .buttons {
-    width: 1000px;
-    height: 49px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    
-    border: 1px solid rgb(128, 0, 107);
+  width: 1000px;
+  height: 49px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .button {
-    width: 212.94px;
-    height: 49px;
-    border-radius: 4px;
-    font-family: Verdana, Geneva, Tahoma;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: -0.1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  width: 212.94px;
+  height: 49px;
+  border-radius: 4px;
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+  background-color:  white;
 }
 .symbol_btn {
-    padding-right: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
 }
 
 .nick {
-    width: 240px;
-    height: 50px;
-    font-family: Verdana, Geneva, Tahoma;
-    font-size: 14px;
-    letter-spacing: -0.05em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #828282;
+  width: 240px;
+  height: 50px;
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #828282;
 }
+.glyphicon {
+  margin-left: 5px;
+  color: #162970;
+}
+/* ------------ short_info--------- */
 
 .short_info {
-    height: 90px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    align-items: center;
-    border: 1px solid green;
-   
+  height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo_currency {
-    width: 720px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 40px;
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 40px;
 }
 .logo_info {
-
-font-family: Verdana, Geneva, Tahoma;
-    font-size: 25px;
-    font-weight: 550;
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 26px;
+  font-weight: initial;
+  color: black;
+  letter-spacing: -0.9px;
 }
+
+/* ---------charts--------- */
+
+
 .currency {
-    width: 155px;
-    height: 30px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: Verdana, Geneva, Tahoma;
-    font-size: 17px;
-    
-    border: 1px solid green;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 17px;
 }
 .button_currency {
-    width: 187px;
-    height: 43px;
-    margin-right: 30px;
-    border-radius: 30px;
-    font-family: Verdana, Geneva, Tahoma;
-    font-size: 10px;
-    font-weight: 640;
-     color: white;
-    background-image:linear-gradient(to right, #255390, #162970);
-   
-   
+  width: 187px;
+  height: 43px;
+  margin-right: 30px;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 10px;
+  font-weight: 640;
+  color: white;
+  background-image: linear-gradient(to right, #255390, #162970);
 }
 .currency_img {
-    padding-right: 7px;
+  padding-right: 7px;
 }
 .charts {
-    display: flex;
-    flex-wrap: wrap;
-    height: 436px;
-    border: 1px solid rgb(0, 98, 128);
-
-}
-
-
-.summary {
-    display: flex;
-    justify-content: flex-start;
-    height: 80px;
-    border: 1px solid rgb(128, 0, 28);
-
-}
-.summary_item {
-    width: 110px;
-    height: 53px;
-    border: 1px solid rgb(128, 126, 0);
+  display: flex;
+  flex-wrap: wrap;
+  height: 436px;
 }
 
 .block_info {
-    width: 290px;
-    height: 113px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    border: 1px solid rgb(0, 98, 128);
-    padding: 0;
+  width: 290px;
+  height: 113px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 15px;
+  padding: 0;
+  border-radius: 5px;
+  background-color: white;
+}
+.block_info:hover {
+  border: 2px solid rgb(228, 168, 4);
 }
 .img_speed {
-    height: 15px;;
+  height: 15px;
 }
 .chart_logo {
-    text-align: right;
-    margin-top: 10px;
+  text-align: right;
+  margin-top: 10px;
 }
 .name_info {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.name {
+  font-family: Verdana, Geneva, Tahoma;
 }
 .speed {
-    width: 90px;
-    font-size: 21px;
-    font-family: Verdana, Geneva, Tahoma;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-   justify-content: space-between;
+  width: 90px;
+  font-size: 21px;
+  font-family: Verdana, Geneva, Tahoma;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .speed > p {
-    font-size: 12px;
-    font-family: Verdana, Geneva, Tahoma;
-    font-weight: bold;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma;
+  font-weight: bold;
+}
+.value {
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 12px;
 }
 .graph {
-    margin-top: 18px;
+  margin-top: 18px;
 }
 .hesh_rating {
+  width: 290px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  padding-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.hesh_buttons {
     width: 290px;
     height: 36px;
     display: flex;
-    border: 1px solid rgb(0, 98, 128);
+    margin: 10px;
+    justify-content: space-around;  
+}
+.rating {
+    background-color: white;
+    width: 185px;
+    height: 40px;
+    padding: 0;
+    margin: 5px;
+}
+
+/* ----summary--- */
+
+.summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+}
+.summary_item {
+  width: 120px;
+  height: 53px;
+  line-height: 0.9;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+ /* -------------Balance---------- */
+.balance_graph {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  margin-left: 20px;
 }
 .balance {
-    height: 320px;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid rgb(128, 126, 0);
+  height: 320px;
+  display: flex;
+  flex-direction: row;
 }
 
 .prediction {
-    width: 303px;
-    height: 289px;
-    
-    border: 1px solid rgb(0, 98, 128);
+  width: 303px;
+  height: 303px;
+  margin-left: 20px;
+  
+}
+.prediction_name {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+.prediction_items {
+  height: 285px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.prediction_item {
+  margin: 25px;
+  margin-top: 0;
+  line-height: 1.3em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.07em;
 }
 
+
+/* --------statistic account-------- */
+
 .statistic {
-    height: 380px;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid rgb(0, 98, 128);
+  height: 380px;
+  display: flex;
+  flex-direction: row;
 }
 .statistic_buttons {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    border: 1px solid rgb(0, 98, 128);
+  height: 50px;
+  width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+}
+.button_statistic {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.07em;
+  height: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .statistic_account {
-    width: 915px;
-    height: 273px;
-    border: 1px solid rgb(0, 98, 128);
+  width: 915px;
+  height: 273px;
+  margin-top: 25px;
+  margin-left: 20px;
 }
 
 .statistic_tab {
-    width: 915px;
-    height: 213px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid rgb(0, 98, 128);
+  width: 915px;
+  height: 213px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .my_contracts {
-    width: 303px;
-    
-    border: 1px solid rgb(0, 98, 128);
+  width: 303px;
+  margin-left: 30px;
+  margin-top: 25px;
+
 }
 .contract {
-    width: 303px;
-    height: 66px;
-    border: 1px solid rgb(0, 98, 128);
+  width: 303px;
+  height: 66px;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: white;
+}
+.contract_name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.07em;
+  margin: 12px;
+}
+.contract_status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  letter-spacing: -0.07em;
+  margin: 12px;
+}
+.more {
+  margin-top: 30px;
+  margin-left: 80px;
+  height: 25px;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 10px;
+  background-color: white;
+  color: #828282;
+  border: 1px solid darkgrey;
 }
 p {
-    margin: 0;
+  margin: 0;
+  color: #828282;
+}
+button:hover {
+  border: 2px solid rgb(228, 168, 4);
+  background-color: white;
 }
