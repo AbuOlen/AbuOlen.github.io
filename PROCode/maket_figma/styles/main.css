@@ -76,7 +76,7 @@
   align-items: center;
 }
 .logo_currency {
-  width: 720px;
+  width: 900px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -95,13 +95,13 @@
 
 
 .currency {
-  width: 160px;
+  width: 200px;
   height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-family: Verdana, Geneva, Tahoma;
-  font-size: 17px;
+  font-size: 20px;
 }
 .button_currency {
   width: 187px;
@@ -133,10 +133,11 @@
   padding: 10px;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
+  
 }
 .block_info:hover {
   border: 2px solid rgb(228, 168, 4);
+  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
 }
 .img_speed {
   height: 15px;
@@ -188,7 +189,7 @@
   letter-spacing: -0.05em;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
+  /* box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19); */
 }
 
 .hesh_buttons {
@@ -261,7 +262,7 @@
   border-radius: 5px;
   margin-top: 10px;
   margin-left: 15px;
-  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
+  /* box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19); */
 }
 .prediction_item {
   margin: 25px;
@@ -324,7 +325,7 @@
   margin-top: 15px;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
+  /* box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19); */
 }
 .contract_name {
   display: flex;
@@ -351,7 +352,7 @@
   background-color: white;
   margin-top: 20px;
   border-radius: 5px;
-  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
+  /* box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19); */
 }
 .more {
   margin-top: 20px;
@@ -371,4 +372,5 @@ p {
 button:hover {
   border: 2px solid rgb(228, 168, 4);
   background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(189, 185, 185, 0.2), 0 6px 20px 0 rgba(199, 188, 188, 0.19);
 }
