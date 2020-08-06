@@ -6,7 +6,7 @@
     <title><balans></title>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
 </head>
 <body>
     <div class="main">
@@ -22,24 +22,23 @@
         <div class="short_info">
             <div class="logo_currency">
                 <div class="logo_info"> МОЯ ФЕРМА </div>
-                <div class="currency"><h3><img class="currency_img" src="images/ltc_small.png"><small> LTC </small>$ 160,43</h3></div>
-                <div class="currency"><h3><img class="currency_img" src="images/btn_small.png"><small> BTC </small>$ 8 545,00</h3></div>
-                <div class="currency"><h3><img class="currency_img" src="images/eth_small.png"><small> ETH </small>$533,00</h3></div>
+                <div class="currency"><h3><img class="currency_img" src="images/ltc_small.png"><small>LTC </small>$160,43</h3></div>
+                <div class="currency"><h3><img class="currency_img" src="images/btn_small.png"><small>BTC </small>$8 545,00</h3></div>
+                <div class="currency"><h3><img class="currency_img" src="images/eth_small.png"><small>ETH </small>$533,00</h3></div>
             </div>
         
-            <button class="button_currency">+ Добавить валюту</button>
+            <button class="button_currency">Добавить валюту</button>
         </div>
         <div class="charts">
             <div class="blocks">
                 <div class="block_info">
                     <div class="name_info">
-                        <div class="name">Суммарный баланс</div>
-                        <div class="speed"><img src="images/point_blue.png"><h3><strong>1.245008</strong><small>BTC</small></h3></div>
-                        <div class="value">15 678 USD</div>
+                        <div class="name_sum">Суммарный баланс</div>
+                        <div class="speed_sum"><img style="width: 7px; height: 7px;" src="images/point_blue.png"><strong>1.245008</strong><small> BTC</small></div>                    
+                        <div class="value_sum">15 678 USD</div>
                     </div>
                     <div class="charts_item">
                         <div class="chart_logo"><img src="images/question.png"></div>
-                        <!-- <div class="graph"></div> -->
                     </div>
                 </div>
                 <div class="hesh_buttons">
@@ -50,8 +49,8 @@
             <div class="blocks">
                 <div class="block_info">
                     <div class="name_info">
-                        <div class="name">Litecoin  LTC</div>
-                        <div class="speed"><img class="img_speed" src="images/speed.png"><h3><strong>24</strong><small>MH/S</small></h3></div>
+                        <div class="name">Litecoin <span> LTC</span>  </div>
+                        <div class="speed"><h3> <img class="img_speed" src="images/speed.png"><strong> 24</strong><small> MH/S</small></h3></div>
                         <div class="value">0.15000000 LTC</div>
                     </div>
                     <div class="charts_item">
@@ -62,7 +61,7 @@
                 <div class="hesh_rating">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Автопокупка хешрейта (3 Mh/s)
+                        Автопокупка хешрейта <span>(3 Mh/s)</span>
                     </label>
                     
                 </div>
@@ -70,8 +69,8 @@
             <div class="blocks">
                 <div class="block_info">
                     <div class="name_info">
-                        <div class="name">Bitcoin  BTC</div>
-                        <div class="speed"><img class="img_speed" src="images/speed.png"><h3><strong>24</strong><small>MH/S</small></h3></div>
+                        <div class="name">Bitcoin <span> BTC</span>  </div>
+                        <div class="speed"><h3> <img class="img_speed" src="images/speed.png"><strong> 24</strong><small> MH/S</small></h3></div>
                         <div class="value">0.15000000 LTC</div>
                     </div>
                     <div class="charts_item">
@@ -82,16 +81,15 @@
                 <div class="hesh_rating">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
-                        Автопокупка хешрейта (3 Mh/s)
+                        Автопокупка хешрейта <span>(10 Mh/s)</span>
                     </label>
                 </div>
             </div>
             <div class="blocks">
                 <div class="block_info">
                     <div class="name_info">
-                        <div class="name">Ethereum  ETH</div>
-                        <div class="speed"><img class="img_speed" src="images/speed.png"> <h3><strong>24</strong><small>MH/S</small></h3>
-                        </div>
+                        <div class="name">Ethereum <span> ETH</span>  </div>
+                        <div class="speed"><h3> <img class="img_speed" src="images/speed.png"><strong> 24</strong><small> MH/S</small></h3></div>
                         <div class="value">0.15000000 LTC</div>
                     </div>
                     <div class="charts_item">
@@ -102,16 +100,16 @@
                 <div class="hesh_rating">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" checked>
-                        Автопокупка хешрейта (3 Mh/s)
+                        Автопокупка хешрейта <span>(5 Mh/s)</span>
                     </label>
                 </div>
             </div>
             <div class="blocks">
                 <div class="block_info">
                     <div class="name_info">
-                        <div class="name">Dash  DASH</div>
-                        <div class="speed"><img class="img_speed" src="images/speed.png"> <h3><strong>0 </strong><small> MH/S</small></h3></div>
-                        <div class="value">0.000000 DASH</div>
+                        <div class="name">Dash <span> DASH</span>  </div>
+                        <div class="speed"><h3> <img class="img_speed" src="images/speed.png"><strong> 24</strong><small> MH/S</small></h3></div>
+                        <div class="value">0.15000000 LTC</div>
                     </div>
                     <div class="charts_item">
                         <div class="chart_logo"><img src="images/dash.png"></div>
@@ -121,15 +119,15 @@
                 <div class="hesh_rating">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" checked>
-                        Автопокупка хешрейта (3 Mh/s)
+                        Автопокупка хешрейта <span>(3 Mh/s)</span>
                     </label>
                 </div>
             </div>
             <div class="blocks">
                 <div class="block_info">
                     <div class="name_info">
-                        <div class="name">Monero  XMR</div>
-                        <div class="speed"><img class="img_speed" src="images/speed.png"><h3><strong>24</strong><small>MH/S</small></h3></div>
+                        <div class="name">Monero <span> XMR</span>  </div>
+                        <div class="speed"><h3> <img class="img_speed" src="images/speed.png"><strong> 24</strong><small> MH/S</small></h3></div>
                         <div class="value">0.15000000 LTC</div>
                     </div>
                     <div class="charts_item">
@@ -140,7 +138,7 @@
                 <div class="hesh_rating">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5" checked>
-                        Автопокупка хешрейта (3 Mh/s)
+                        Автопокупка хешрейта <span>(10 Mh/s)</span>
                     </label>
                 </div>
             </div>
@@ -149,24 +147,24 @@
         <div class="summary">
             <div class="summary_item"><p>Общий баланс</p><br><h3><img src="images/point_green.png"> <strong>1.245 </strong><small>BTC</small></h3></div>
             <div class="summary_item"><p>Начисления</p><br><h3><img src="images/point_blue.png"> <strong>0.114 </strong><small>BTC</small></h3></div>
-            <div class="summary_item"><p>Обслуживание</p><br><h3><img src="images/point_yelow.png"><strong>0.087 </strong><small>BTC</small></h3></div>
+            <div class="summary_item"><p>Обслуживание</p><br><h3><img src="images/point_yelow.png"> <strong>0.087 </strong><small>BTC</small></h3></div>
         </div>
         <div class="balance">
-            <div class="balance_graph">Начисления и баланс<br><br><img src="images/balans.png"></div>
+            <div class="balance_graph">Начисления и баланс<br><img src="images/balans.png"></div>
             <div class="prediction">
                 <div class="prediction_name">Прогноз доходности<img src="images/question_red.png"></div>
                 <div class="prediction_items">
                     <div class="prediction_item">
-                        <p>День</p><img src="images/point_blue.png">0.000000 BTC = 0.00 USD
+                        <p><small>День</small></p><img src="images/point_blue.png"> 0.000000 BTC = 0.00 USD
                     </div>
                     <div class="prediction_item">
-                        <p>Неделя</p><img src="images/point_blue.png">0.000000 BTC = 0.00 USD
+                        <p><small>Неделя</small></p><img src="images/point_blue.png"> 0.000000 BTC = 1000.00 USD
                     </div>
                     <div class="prediction_item">
-                        <p>Месяц</p><img src="images/point_blue.png">0.000000 BTC = 0.00 USD
+                        <p><small>Месяц</small></p><img src="images/point_blue.png"> 0.000000 BTC = 50000.00 USD
                     </div>
                     <div class="prediction_item">
-                        <p>Год</p><img src="images/point_blue.png">0.000000 BTC = 0.00 USD
+                        <p><small>Год</small></p><img src="images/point_blue.png"> 0.000000 BTC = 0.00 USD
                     </div>
                 </div>
             </div>
@@ -183,62 +181,64 @@
                     <button class="button_statistic">Contacts</button>
                 </div>
                 <div class="statistic_tab">
-                    <table class="table table-hover">
+                    <table class="table table-hover table-fixed">
+                        <thead>
                         <tr>
                             <th>Тариф</th>
+                            <th> </th>
                             <th>Дата</th>
                             <th>Время</th>
                             <th>Сумма</th>
-                            <th></th>
+                            <th> </th>
                         </tr>
+                        </thead>
+                        <tbody>
                           <tr>
-                            <td>DNC Optimal<p class="text-success">Активен</p></td>
+                            <td>BTC Optimal</td>
+                            <td><p class="tarif_status_active">Активен</p></td>
                             <td>28.02.2018</td>
                             <td>03:13:26</td>
                             <td>0.250134 BTC</td>
                             <td>3 145 USD</td>
                           </tr>
                           <tr>
-                            <td>DNC Optimal<p class="text-warning">Заканчивается</p></td>
+                            <td>BTC Optimal</td>
+                            <td><p class="tarif_status_terminate">Заканчивается</p></td>
                             <td>28.02.2018</td>
                             <td>03:13:26</td>
                             <td>0.250134 BTC</td>
                             <td>3 145 USD</td>
                           </tr>
                           <tr>
-                            <td>DNC Optimal<p class="text-warning">Заканчивается</p></td>
+                            <td>BTC Optimal</td>
+                            <td><p class="tarif_status_terminate">Заканчивается</p></td>
                             <td>28.02.2018</td>
                             <td>03:13:26</td>
                             <td>0.250134 BTC</td>
                             <td>3 145 USD</td>
                           </tr>
+                        </tbody>
                       </table>
                 </div>
             </div>
             <div class="my_contracts">Мои контракты
                 <div class="contract">
                     <div class="contract_name"><p>Custom BTC</p><p>2 TH/s</p></div>
-                    <div class="contract_status"><p class="text-success">Активен</p><p>10.15.2018-10.15.2019</p></div>
+                    <div class="contract_status"><p class="tarif_status_active">Активен</p><p>10.15.2018-10.15.2019</p></div>
                 </div>
                 <div class="contract">
                     <div class="contract_name"><p>Preorder LTC</p><p>6 TH/s</p></div>
-                    <div class="contract_status"><p class="text-warning">Заканчивается</p><p>10.15.2017-10.15.2019</p></div>
+                    <div class="contract_status"><p class="tarif_status_terminate">Заканчивается</p><p>10.15.2017-10.15.2019</p></div>
                 </div>
                 <div class="contract">
                     <div class="contract_name"><p>Preorder DASH</p><p>2 TH/s</p></div>
-                    <div class="contract_status"><p class="text-warning">Заканчивается</p><p>10.15.2017-10.15.2019</p></div>
+                    <div class="contract_status"><p class="tarif_status_terminate">Заканчивается</p><p>10.15.2017-10.15.2019</p></div>
                 </div>
                 <button class="more">... Показать все</button>
             </div>
-            </div>
-
-
-
+        </div>
 
     </div>
-
-
-
 
 </body>
 </html>
