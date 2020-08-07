@@ -251,19 +251,20 @@
     justify-content: space-around;  
 }
 .rating {
-    /* background-color: white; */
-    width: 185px;
-    height: 40px;
+    width: 180px;
+    height: 36px;
     padding: 0;
-    margin: 5px;
 }
 .hesh_buttons .rating:nth-child(1) {
   background-image: url(../images/binance.png);
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 10px;
 }
 .hesh_buttons .rating:nth-child(2) {
   background-image: url(../images/buy_sell.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ----summary--- */
