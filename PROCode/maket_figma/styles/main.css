@@ -252,7 +252,7 @@
 }
 .rating {
     width: 180px;
-    height: 36px;
+    height: 34px;
     padding: 0;
 }
 .hesh_buttons .rating:nth-child(1) {
@@ -264,6 +264,7 @@
 .hesh_buttons .rating:nth-child(2) {
   background-image: url(../images/buy_sell.png);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
