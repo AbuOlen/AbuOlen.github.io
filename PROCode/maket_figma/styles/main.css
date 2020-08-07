@@ -229,7 +229,7 @@
   height: 36px;
   display: flex;
   align-items: center;
-  margin: 16px;
+  margin: 10px;
   padding-left: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -251,11 +251,19 @@
     justify-content: space-around;  
 }
 .rating {
-    background-color: white;
+    /* background-color: white; */
     width: 185px;
     height: 40px;
     padding: 0;
     margin: 5px;
+}
+.hesh_buttons .rating:nth-child(1) {
+  background-image: url(../images/binance.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hesh_buttons .rating:nth-child(2) {
+  background-image: url(../images/buy_sell.png);
 }
 
 /* ----summary--- */
