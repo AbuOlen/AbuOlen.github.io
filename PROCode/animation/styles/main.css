@@ -75,10 +75,64 @@
     }
   }
 
-@keyframes ball_bounce {
+  @keyframes ball_bounce {
     0% {
         transform: translate(0, 0);
       }
+    /* 5% {
+        transform: translate(55px, -140px);
+      } */
+    10% {
+        transform: translate(150px, -80px)
+      }
+    /* 17% {
+        transform: translate(225px, -220px)
+      } */
+    20% {
+        transform: translate(300px, -160px)
+      }
+    /* 27% {
+        transform: translate(375px, -280px)
+      } */
+    30% {
+        transform: translate(450px, -240px)
+      }
+    /* 37% {
+        transform: translate(525px, -350px)
+      } */
+    40% {
+        transform: translate(600px, -320px)
+      }
+    50% {
+        transform: translate(600px, 0)
+      }
+    /* 57% {
+        transform: translate(530px, -120px)
+      } */
+    60% {
+        transform: translate(450px, -80px)
+      }
+    /* 67% {
+        transform: translate(375px, -224px)
+      } */
+    70% {
+        transform: translate(300px, -160px)
+      }
+    /* 77% {
+        transform: translate(225px, -274px)
+      } */
+    80% {
+        transform: translate(150px, -240px)
+      }
+    /* 87% {
+        transform: translate(55px, -344px)
+      } */
+    90% {
+        transform: translate(0, -320px)
+      }
+    100% {
+        transform: translate(0, 0);
+      } 
     }
      
 
@@ -115,30 +169,30 @@ body {
     height: 50px;
     background-color: coral;
     border-radius: 50%;
-    animation: ball_bounce 5s ease-in-out infinite;
+    animation: ball_bounce 4s cubic-bezier(.17,.67,.62,1.51) infinite;
   }
   .stair5 {
     left: 150px;
     transform: scale(1, 0.2);
-    animation: change_stair1 5s infinite;
+    animation: change_stair1 4s infinite;
   }
   .stair4 {
     left: 300px;
     transform: scale(1, 0.4);
-    animation: change_stair2 5s infinite;;
+    animation: change_stair2 4s infinite;;
   }
   .stair3 {
     left: 450px;
     transform: scale(1, 0.6);
-    animation: change_stair3 5s infinite;;
+    animation: change_stair3 4s infinite;;
   }
   .stair2 {
     left: 600px;
     transform: scale(1, 0.8);
-    animation: change_stair4 5s infinite;;
+    animation: change_stair4 4s infinite;;
   }
   .stair1 {
     left: 750px;
     transform: scale(1, 1);
-    animation: change_stair5 5s infinite;;
+    animation: change_stair5 4s infinite;;
   }

@@ -17,39 +17,33 @@
     font-weight: bold;
     text-align: center;
 }
-.button_play:active, .timer::after {
+.player:focus-within .timer::after { 
     font-family: "fontello_icons";
-    content: '\e832';
+    content: '\e832'; 
+} 
+.player:focus-within .button_play {
+    outline:0;
 }
-
-.control {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;   
-}
-input,
-label {
+input {
     margin: .4rem 0;
- }   
+}   
 .time {
+    position: absolute;
     width: 120px;
     height: 40px;
-    margin: 0;
+    margin: 0 15px 0 15px;
     text-align: center;
+    top: 90px;
+    margin-left: 25px;
 }
-
 .button_play {
-    width: 120px;
+    width: 125px;
     height: 40px;
     font-family: "fontello_icons";
     background-color: white;
     border: 1px solid grey;
     border-radius: 5px;
-    margin: 0;
+    margin-left: 160px;
     cursor: pointer;
 }
 
