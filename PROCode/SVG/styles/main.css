@@ -4,16 +4,10 @@ body {
     margin: 0;
     place-items: center center;
   }
-/* .picture {
-    width: 700px;
-    height: 700px;
-    margin: 20px;
-} */
-
 svg {
     width: 700px;
     height: 700px;
 }
-svg:hover {
-    fill: rgb(44, 167, 19);
+svg:hover  path{
+    fill: rgb(252, 237, 33);
 }
