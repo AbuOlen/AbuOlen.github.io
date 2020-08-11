@@ -1,0 +1,38 @@
+body {
+    background-color: #3498DB;
+  }
+  .items {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+  }
+  .items:hover .item{
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  .item {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: right center;
+  }
+  .card, .card_back {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: whitesmoke;
+    color: grey;
+    
+    font: bolder 22px/200px Courier;
+    border: 3px solid #444;
+  }
+  .card {
+    background: pink;
+  }
+  .card_back {
+    transform: rotateY( 180deg );
+  }
+  
