@@ -1,198 +1,209 @@
 @keyframes change_stair1 {
-    0% {
-        transform: scale(1, 0.2);
-      }
-      40%{
-        transform: scale(1, 0.2);
-      }
-      50% {
-        transform: scale(1, 1);
-      }
-      90% {
-        transform: scale(1,1);
-      }
-      100% {
-        transform: scale(1, 0.2);
-      }
+  0% {
+    transform: scale(1, 0.2);
+  }
+  40% {
+    transform: scale(1, 0.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 0.2);
+  }
 }
-@keyframes change_stair2 { 
-    0% {
-      transform: scale(1, 0.4);
-    }
-    40% {
-      transform: scale(1, 0.4);
-    }
-    50% {
-      transform: scale(1, 0.8);
-    }
-    90% {
-      transform: scale(1, 0.8);
-    }
-    100% {
-      transform: scale(1, 0.4);
-    }
+@keyframes change_stair2 {
+  0% {
+    transform: scale(1, 0.4);
   }
-  @keyframes change_stair3 { 
-    0% {
-      transform: scale(1, 0.6);
-    }
-    100% {
-      transform: scale(1, 0.6);
-    }
+  40% {
+    transform: scale(1, 0.4);
   }
-  @keyframes change_stair4 { 
-    0% {
-      transform: scale(1, 0.8);
-    }
-    40% {
-      transform: scale(1, 0.8);
-    }
-    50% {
-      transform: scale(1, 0.4);
-    }
-    90% {
-      transform: scale(1, 0.4);
-    }
-    100% {
-      transform: scale(1, 0.8);
-    }
+  50% {
+    transform: scale(1, 0.8);
   }
-  @keyframes change_stair5 { 
-    0% {
-      transform: scale(1, 1);
-    }
-    40% {
-      transform: scale(1, 1);
-    }
-    50% {
-      transform: scale(1, 0.2);
-    }
-    90% {
-      transform: scale(1, 0.2);
-    }
-    100% {
-      transform: scale(1, 1);
-    }
+  90% {
+    transform: scale(1, 0.8);
   }
+  100% {
+    transform: scale(1, 0.4);
+  }
+}
+@keyframes change_stair3 {
+  0% {
+    transform: scale(1, 0.6);
+  }
+  100% {
+    transform: scale(1, 0.6);
+  }
+}
+@keyframes change_stair4 {
+  0% {
+    transform: scale(1, 0.8);
+  }
+  40% {
+    transform: scale(1, 0.8);
+  }
+  50% {
+    transform: scale(1, 0.4);
+  }
+  90% {
+    transform: scale(1, 0.4);
+  }
+  100% {
+    transform: scale(1, 0.8);
+  }
+}
+@keyframes change_stair5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.2);
+  }
+  90% {
+    transform: scale(1, 0.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 
-  @keyframes ball_bounce {
-    0% {
-        transform: translate(0, 0);
-      }
-    /* 5% {
-        transform: translate(55px, -140px);
-      } */
-    10% {
-        transform: translate(150px, -80px)
-      }
-    /* 17% {
-        transform: translate(225px, -220px)
-      } */
-    20% {
-        transform: translate(300px, -160px)
-      }
-    /* 27% {
-        transform: translate(375px, -280px)
-      } */
-    30% {
-        transform: translate(450px, -240px)
-      }
-    /* 37% {
-        transform: translate(525px, -350px)
-      } */
-    40% {
-        transform: translate(600px, -320px)
-      }
-    50% {
-        transform: translate(600px, 0)
-      }
-    /* 57% {
-        transform: translate(530px, -120px)
-      } */
-    60% {
-        transform: translate(450px, -80px)
-      }
-    /* 67% {
-        transform: translate(375px, -224px)
-      } */
-    70% {
-        transform: translate(300px, -160px)
-      }
-    /* 77% {
-        transform: translate(225px, -274px)
-      } */
-    80% {
-        transform: translate(150px, -240px)
-      }
-    /* 87% {
-        transform: translate(55px, -344px)
-      } */
-    90% {
-        transform: translate(0, -320px)
-      }
-    100% {
-        transform: translate(0, 0);
-      } 
-    }
-     
+@keyframes ball_bounce-x-1 {
+  0% {
+    transform: translateX(0px);
+  }
+  11.1% {
+    transform: translateX(145px);
+  }
+  22.2% {
+    transform: translateX(290px);
+  }
+  33.3% {
+    transform: translateX(435px);
+  }
+  44.3% {
+    transform: translateX(590px);
+  }
+  55.4% {
+    transform: translateX(590px);
+  }
+  66.5% {
+    transform: translateX(435px);
+  }
+  77.8% {
+    transform: translateX(290px);
+  }
+  88.9% {
+    transform: translateX(145px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes ball_bounce-y-1 {
+  0% {
+    transform: translateY(800px);
+  }
+  11.1% {
+    transform: translateY(725px);
+  }
+  22.2% {
+    transform: translateY(650px);
+  }
+  33.3% {
+    transform: translateY(565px);
+  }
+  44.3% {
+    transform: translateY(490px);
+  }
+  55.4% {
+    transform: translateY(640px);
+  }
+  66.5% {
+    transform: translateY(690px);
+  }
+  77.8% {
+    transform: translateY(650px);
+  }
+  88.9% {
+    transform: translateY(565px);
+  }
+  100% {
+    transform: translateY(490px);
+  }
+}
+
+
 
 body {
-    width: 1000px;
-    height: 800px;
-    border: 1px solid grey;
-    background-color: honeydew;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+  width: 1000px;
+  height: 800px;
+  border: 1px solid grey;
+  background-color: honeydew;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
 
 .main {
-    width: 750px;
-    height: 800px;
-    position: relative;
+  width: 750px;
+  height: 800px;
+  position: relative;
 }
 .stairs {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    height: 50%;
-    background-color: cadetblue;
-    transform-origin: center bottom;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  background-color: cadetblue;
+  transform-origin: center bottom;
 }
 
-.ball {
-    position: absolute;
-    bottom: 80px;
-    left: 175px;
-    width: 50px;
-    height: 50px;
-    background-color: coral;
-    border-radius: 50%;
-    animation: ball_bounce 4s cubic-bezier(.17,.67,.62,1.51) infinite;
-  }
-  .stair5 {
-    left: 150px;
-    transform: scale(1, 0.2);
-    animation: change_stair1 4s infinite;
-  }
-  .stair4 {
-    left: 300px;
-    transform: scale(1, 0.4);
-    animation: change_stair2 4s infinite;;
-  }
-  .stair3 {
-    left: 450px;
-    transform: scale(1, 0.6);
-    animation: change_stair3 4s infinite;;
-  }
-  .stair2 {
-    left: 600px;
-    transform: scale(1, 0.8);
-    animation: change_stair4 4s infinite;;
-  }
-  .stair1 {
-    left: 750px;
-    transform: scale(1, 1);
-    animation: change_stair5 4s infinite;;
-  }
+.ball-x {
+  position: absolute;
+  bottom: 80px;
+  left: 175px;
+  width: 50px;
+  height: 50px;
+  background-color: coral;
+  border-radius: 50%;
+  animation: ball_bounce-x-1 4s ease-out  infinite;
+}
+
+.ball-y {
+  animation: ball_bounce-y-1 4s cubic-bezier(0.53, 3, 0.81, 2.22) infinite;
+}
+.stair5 {
+  left: 150px;
+  transform: scale(1, 0.2);
+  animation: change_stair1 4s infinite;
+}
+.stair4 {
+  left: 300px;
+  transform: scale(1, 0.4);
+  animation: change_stair2 4s infinite;
+}
+.stair3 {
+  left: 450px;
+  transform: scale(1, 0.6);
+  animation: change_stair3 4s infinite;
+}
+.stair2 {
+  left: 600px;
+  transform: scale(1, 0.8);
+  animation: change_stair4 4s infinite;
+}
+.stair1 {
+  left: 750px;
+  transform: scale(1, 1);
+  animation: change_stair5 4s infinite;
+}
