@@ -121,14 +121,16 @@
   33.3% {
     transform: translateY(565px);
   }
-  44.3% {
+  50.3% {
+    animation: linear;
     transform: translateY(490px);
   }
   55.4% {
-    transform: translateY(640px);
+    transform: translateY(800px);
+    
   }
   66.5% {
-    transform: translateY(690px);
+    transform: translateY(725px);
   }
   77.8% {
     transform: translateY(650px);
@@ -137,6 +139,7 @@
     transform: translateY(565px);
   }
   100% {
+    animation: linear;
     transform: translateY(490px);
   }
 }
