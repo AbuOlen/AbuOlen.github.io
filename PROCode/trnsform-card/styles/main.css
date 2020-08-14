@@ -25,7 +25,6 @@ body {
     backface-visibility: hidden;
     background: whitesmoke;
     color: grey;
-    
     font: bolder 22px/200px Courier;
     border: 3px solid #444;
   }

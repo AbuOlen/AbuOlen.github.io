@@ -5,14 +5,14 @@
 }
 .arrow {
    position: absolute;
-    height: 100px;
-    width: 2px;
+    height: 120px;
+    width: 5px;
     border-left: 2px solid black;
     top: 150px;
     right: 144px;
     z-index: 100;
     animation: switch 60s infinite steps(60);
-    transform-origin: 0 0;
+    transform-origin: 0 0 ;
     transform: rotate(180deg);
 }
 
