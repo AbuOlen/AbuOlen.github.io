@@ -83,25 +83,25 @@
     transform: translateX(145px);
   }
   20% {
-    transform: translateX(290px);
+    transform: translateX(295px);
   }
   30% {
-    transform: translateX(435px);
+    transform: translateX(440px);
   }
   40% {
-    transform: translateX(590px);
+    transform: translateX(595px);
   }
   50% {
-    transform: translateX(590px);
+    transform: translateX(595px);
   }
   60% {
-    transform: translateX(435px);
+    transform: translateX(450px);
   }
   70% {
-    transform: translateX(290px);
+    transform: translateX(295px);
   }
   80% {
-    transform: translateX(145px);
+    transform: translateX(150px);
   }
   90% {
     transform: translateX(0px);
@@ -116,7 +116,7 @@
     transform: translateY(725px);
   }
   20% {
-    transform: translateY(650px);
+    transform: translateY(645px);
   }
   30% {
     transform: translateY(565px);
@@ -133,7 +133,7 @@
     transform: translateY(725px);
   }
   70% {
-    transform: translateY(650px);
+    transform: translateY(645px);
   }
   80% {
     transform: translateY(565px);
@@ -181,34 +181,34 @@ body {
   height: 50px;
   background-color: coral;
   border-radius: 50%;
-  animation: ball_bounce-x-1 4s ease-out  infinite;
+  animation: ball_bounce-x-1 5s ease-out  infinite;
 }
 
 .ball-y {
-  animation: ball_bounce-y-1 4s cubic-bezier(0.53, 3, 0.81, 2.22) infinite;
+  animation: ball_bounce-y-1 5s cubic-bezier(0.53, 3, 0.81, 2.22) infinite;
 }
 .stair5 {
   left: 150px;
   transform: scale(1, 0.2);
-  animation: change_stair1 4s infinite;
+  animation: change_stair1 5s infinite;
 }
 .stair4 {
   left: 300px;
   transform: scale(1, 0.4);
-  animation: change_stair2 4s infinite;
+  animation: change_stair2 5s infinite;
 }
 .stair3 {
   left: 450px;
   transform: scale(1, 0.6);
-  animation: change_stair3 4s infinite;
+  animation: change_stair3 5s infinite;
 }
 .stair2 {
   left: 600px;
   transform: scale(1, 0.8);
-  animation: change_stair4 4s infinite;
+  animation: change_stair4 5s infinite;
 }
 .stair1 {
   left: 750px;
   transform: scale(1, 1);
-  animation: change_stair5 4s infinite;
+  animation: change_stair5 5s infinite;
 }
