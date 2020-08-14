@@ -1,48 +1,102 @@
-
 .main {
-    margin: auto;
-     width: 100%;
-     height: 1000px;
-     background-color: honeydew;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  background-color: honeydew;
 }
 .first_part {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    margin-top: 50px;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin-top: 50px;
 }
 .button {
-    position: relative;
-    t
-    display: inline-block;
-    background-color: fuchsia;
-    color: honeydew;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: fuchsia;
-    border-radius: 5px;
-    box-shadow: 0 9px rgb(231, 185, 220);
-    overflow: hidden;
+  position: relative;
+  display: inline-block;
+  background-color: fuchsia;
+  color: honeydew;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: fuchsia;
+  border-radius: 5px;
+  box-shadow: 0 9px rgb(231, 185, 220);
+  overflow: hidden;
 }
 .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1.5em;
-    height: 100%;
-    background-color: lavender;
-    opacity: 0.5;
-    transform: translateX(-5em) skewX(-45deg);
-    transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5em;
+  height: 100%;
+  background-color: lavender;
+  opacity: 0.5;
+  transform: translateX(-5em) skewX(-45deg);
+  transition: 0.5s;
 }
 .button:hover::before {
-    transform: translateX(8em) skewX(-45deg);
+  transform: translateX(8em) skewX(-45deg);
 }
-  .button:active {
-    background-image: linear-gradient(to right, #f9f7f8, #88d8b9, #63a8a5);
-    box-shadow: 0 2px rgb(204, 174, 191);
-    transform: translateY(5px);
-  }
+.button:active {
+  background-image: linear-gradient(to right, #f9f7f8, #88d8b9, #63a8a5);
+  box-shadow: 0 2px rgb(204, 174, 191);
+  transform: translateY(5px);
+}
+
+
+.second_part {
+  width: 100%;
+  height: 500px;
+  background-color: rgb(245, 237, 191);
+}
+.shelf {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+}
+.books {
+  position: relative;
+  width: 1500px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: start;
+  list-style: none;
+  overflow: hidden;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  width: 5%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: khaki;
+  transition: all 1s;
+  cursor: pointer;
+  border: 2px solid brown;
+}
+.name_article {
+  visibility: hidden;
+  padding: 10px;
+}
+.name_book span {
+  width: 150px;
+  transform-origin: 84px 70px;
+  display: inline-block;
+  transform: rotate(-90deg);
+  text-align: start;
+  margin-top: 120px;
+  color: rgb(2, 97, 84);
+  font-size: 2em;
+  font-weight: bold;
+}
+.books li:hover {
+  width: 30%;
+}
+.books li:hover .name_article {
+  visibility: visible;
+}
