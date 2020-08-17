@@ -29,14 +29,36 @@
                   </ul>
                 </div>   
               </nav>
+           
+              <div class="search">
+                <div class="search_on_site">
+                    <form>
+                        <button type="text">
+                            <p class="icon-search"></p>
+                        </button>
+                        <input type="search" id="site-search" name="q" placeholder="Пошук оголошення"
+                            aria-label="Search through site content">
+                    </form>
+                </div>
+                <select name="number" autofocus>
+                    <option disabled="disabled" selected="selected">Пошук за містом</option>
+                    <option>Київ</option>
+                    <option>Львів</option>
+                    <option>Дніпро</option>
+                    <option>Рівне</option>
+                </select>
+            </div>
+          
             <button class="button-navigation">Додати оголошення</button>
         </div>
         <div class="slider">
-            <div class="info"><img src="./images/phone.png"></div>
-            <div class="info"><img src="./images/car.png"></div>
-            <div class="info"><img src="./images/phone.png"></div>
+            <div class="info info1"><img src="./images/phone.png"></div>
+            <div class="info info2"><img src="./images/car.png"></div>
+            <div class="info info3"><img src="./images/phone.png"></div>
         </div>
         <div class="sort"><p>Всі оголошення</p>
+            <div class="symbol_currency"></div>
+            <div class="symbol_sort"></div>
             <div class="sort-by">
                 <div class="currency-by">
                     <label for="currency">Валюта:</label>
