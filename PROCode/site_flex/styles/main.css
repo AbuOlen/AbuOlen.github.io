@@ -19,6 +19,11 @@
   font-family: "fontello_icons";
 }
 
+@viewport {
+  zoom: 1.0; 
+  width: device-width;
+}
+
 @media screen and (max-width: 750px) {
   .sort-by {
     display: none;
@@ -40,6 +45,9 @@
   .info3 {
     display: none;
   }
+  .search {
+    display: none;
+  }
 }
 
 @media screen and (max-width:949px) and (min-width: 751px) {
@@ -52,31 +60,25 @@
   .info3 {
     display: none;
   }
-}
-
-@media screen and (max-width: 949px) {
   .search {
     display: none;
-    justify-content: space-between;
   }
 }
 
-@media screen and (max-width: 1115px) and (min-width: 950px) {
+@media screen and (max-width: 1099px) and (min-width: 950px) {
   .search {
     display: flex;
     justify-content: space-around;
-    margin-left: 0;
   }
   .sort-by {
     display: flex;
   }
 }
 
-@media screen and (min-width: 1116px) {
+@media screen and (min-width: 1100px) {
   .search {
     display: flex;
     justify-content: space-between;
-    margin-left: 190px;
   }
   .sort-by {
     display: flex;
@@ -119,6 +121,9 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 83px;
+}
+nav {
+  margin-right: 20px;
 }
 #menuToggle {
   display: block;
@@ -203,6 +208,13 @@ body {
 }
 #menuToggle input:checked ~ ul li {
   opacity: 1;
+}
+.search_button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 .search {
   width: 630px;
