@@ -1,0 +1,24 @@
+
+$color_block: grey;
+$color_border: white;
+$size_side: 100px;
+$size_border: 5px;
+$number_width: 4;
+$number_height: 3;
+
+.main {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(190, 220, 240);
+}
+.blocks {
+    width: $number_width * $size_side;
+    height: $number_height * $size_side;    
+    background-color: $color_block;
+    background-image: linear-gradient($color_border $size_border, transparent $size_border),
+        linear-gradient(90deg, $color_border $size_border, transparent $size_border),
+        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: $size_side $size_side, $size_side $size_side;
+    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
