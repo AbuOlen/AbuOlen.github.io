@@ -1,0 +1,212 @@
+.container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 
+    10% 1fr 10% 1fr 10% 10% 1fr 1fr 10% 10% 15% 15%;
+    grid-template-rows: 
+    100px 350px 200px 30px 150px 100px;
+    grid-template-areas: 
+    "logo logo logo logo logo logo logo logo logo about about about"
+    "article1 article1 article1 article1 article2 article2 article2 article2 article2 article2 article2 article2"
+    "article1 article1 article1 article1 aside9 aside9 aside9 aside9 aside9 aside9 aside9 aside9"
+    "aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13"
+    "article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3"
+    "footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12";
+    border: 1px solid red;
+}
+@media (max-width: 400px) {
+    .container { 
+    grid-template-columns: repeat(auto-fill, minmax(133px, 1fr));
+    grid-template-rows: 50px 50px 200px 90px 200px 70px;
+    grid-template-areas: 
+    "logo logo logo"
+    "about about about"
+    "article1 article2 article2"
+    "article1 aside9 aside9"
+    "article3 article3 article3"
+    "footer12 footer12 footer12";
+    }
+}
+
+.logo {
+    grid-area: logo;
+    display: grid;
+    background-color: rgba(245, 245, 101, 0.733);
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid black;
+}
+@media (max-width: 400px) {
+    .logo { 
+    padding: 5px;
+    justify-content: center;
+    }
+}
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 20% 20%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(101, 202, 248, 0.596);
+    font-size: 25px;
+    border: 2px solid black;
+}
+.article1 {
+    grid-area: article1;
+    display: grid;
+    grid-template-columns: 45% 45%; 
+    overflow: auto;
+    gap: 1vw;
+    justify-content: center; 
+    scrollbar-width: thin; 
+    border: 2px solid black;
+}
+@media (max-width: 400px) {
+    .article1 {
+        grid-template-areas: "section-2 section-1";
+    }
+}
+.section-1 {
+    display: grid;
+    grid-template-rows: repeat(3, 220px);
+    padding-top: 5px;
+    grid-gap: 2rem;
+}
+@media (max-width: 400px) {
+    .section-1 {
+        grid-area: section-1;
+    }
+}
+.section-2 {
+    display: grid;
+    grid-template-rows: repeat(2, 350px);
+    align-content: end;  
+    grid-gap: 1rem;
+}
+@media (max-width: 400px) {
+    .section-2 {
+        grid-area: section-2;
+    }
+}
+.section3, .section4, .section5, .section6, .section6a {
+    height: 220px;
+    padding: 5px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.section4 {
+    align-self: end;
+}
+.article2 {
+    grid-area: article2;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 0.5em;
+    border: 2px solid black;
+}
+.aside7, .aside8{
+    align-items: center;
+    padding-left: 1em;
+    overflow: hidden;
+    display: grid;
+    border: 2px solid black;
+}
+.aside7 {
+    max-width: 50%;
+    padding: 1rem;
+    align-self: start;
+    justify-self: left;
+    grid-template-columns: 70% 30%;
+}
+@media (max-width: 400px) {
+    .aside7 { 
+        max-width: 250px;
+        max-height: 80px;
+        font-size: 14px;
+        padding: 0;
+    }
+}
+.aside8 {
+    max-width: 60%;
+    padding: 1rem;
+    align-self: end;
+    justify-self: right;
+    grid-template-columns: 30% 70%;
+}
+@media (max-width: 400px) {
+    .aside8 {
+        max-width: 250px;
+        max-height: 80px;
+        align-self: start;
+        justify-self: start;
+        font-size: 14px;
+        padding: 0;
+    }
+}
+.aside7 img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: none; 
+}
+ 
+.aside8 img {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+    border: none;
+}
+@media (max-width: 400px) {
+    .aside7 img , .aside8 img {
+        width: 40px;
+        align-self: start;
+        margin-top: 15px;
+    }
+}
+.article3 {
+    grid-area: article3;
+    display: grid;
+    grid-template-columns: 49.5% 49.5%;
+    column-gap: 1%;    
+    padding: 5px;
+    border: 2px solid black;
+}
+@media (max-width: 400px) {
+    .article3 {
+        grid-template-columns: repeat(auto-fill, minmax(49.5%, 100%));
+    }
+}
+.section10, .section11 {
+    padding: 5px;
+    display: flex;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.aside9 {
+    grid-area: aside9;
+    background-image: url(../images/flowers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border: 2px solid black;
+}
+.aside13 {
+    grid-area: aside13;
+    overflow: auto;
+    scrollbar-width: thin; 
+    border: 2px solid black;
+}
+@media (max-width: 400px) {
+    .aside13 {
+        display: none;
+    }
+}
+.footer12 {
+    grid-area: footer12;
+    background-image: url(../images/hills.jpg);
+}
+
