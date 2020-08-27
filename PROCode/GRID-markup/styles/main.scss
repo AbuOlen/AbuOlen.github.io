@@ -221,10 +221,11 @@
 
 .aside13 {
     grid-area: aside13;
+    display: grid;
+    align-items: center;
     white-space: nowrap; 
     overflow: hidden;
     position: relative;
-    line-height: 3em;
     border: 2px solid black;
 }
 .scrolling {
