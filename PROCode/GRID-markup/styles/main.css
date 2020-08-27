@@ -311,20 +311,11 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-area: aside13;
-  overflow: auto;
-  scrollbar-width: thin;
-  border: 2px solid black;
-}
-
-.aside13 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-area: aside13;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
   line-height: 3em;
+  border: 2px solid black;
 }
 
 .scrolling {

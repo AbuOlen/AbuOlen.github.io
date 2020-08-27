@@ -217,20 +217,15 @@
     background-position: bottom;
     border: 2px solid black;
 }
-.aside13 {
-    grid-area: aside13;
-    overflow: auto;
-    scrollbar-width: thin; 
-    border: 2px solid black;
-}
+
 
 .aside13 {
     grid-area: aside13;
     white-space: nowrap; 
     overflow: hidden;
-    // overflow-y: auto;
     position: relative;
     line-height: 3em;
+    border: 2px solid black;
 }
 .scrolling {
     position:absolute;
