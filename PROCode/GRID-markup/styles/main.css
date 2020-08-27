@@ -323,7 +323,6 @@
   grid-area: aside13;
   white-space: nowrap;
   overflow: hidden;
-  overflow-y: auto;
   position: relative;
   line-height: 3em;
 }
