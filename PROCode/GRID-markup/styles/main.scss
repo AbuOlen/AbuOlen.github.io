@@ -1,11 +1,15 @@
+
+
 .container {
+    box-sizing: border-box;
     display: grid;
     max-width: 1200px;
+    height: calc(100vh - 60px);
     margin: 0 auto;
     grid-template-columns: 
     10% 1fr 10% 1fr 10% 10% 1fr 1fr 10% 10% 15% 15%;
     grid-template-rows: 
-    100px 350px 200px 30px 150px 100px;
+    1fr 2.5fr 2fr 0.5fr 2fr 1.5fr;
     grid-template-areas: 
     "logo logo logo logo logo logo logo logo logo about about about"
     "article1 article1 article1 article1 article2 article2 article2 article2 article2 article2 article2 article2"
@@ -18,7 +22,8 @@
 @media (max-width: 400px) {
     .container { 
     grid-template-columns: repeat(auto-fill, minmax(133px, 1fr));
-    grid-template-rows: 50px 50px 200px 90px 200px 70px;
+    grid-template-rows: 
+    1fr 1fr 3fr 1fr 2fr 1.5fr;
     grid-template-areas: 
     "logo logo logo"
     "about about about"
@@ -28,11 +33,10 @@
     "footer12 footer12 footer12";
     }
 }
-
 .logo {
     grid-area: logo;
     display: grid;
-    background-color: rgba(245, 245, 101, 0.733);
+    background-color: rgba(101, 202, 248, 0.596);
     font-size: 25px;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +55,7 @@
     grid-template-columns: 20% 20%;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(101, 202, 248, 0.596);
+    background-color: rgba(245, 245, 101, 0.733);
     font-size: 25px;
     border: 2px solid black;
 }
@@ -104,65 +108,83 @@
 .article2 {
     grid-area: article2;
     display: grid;
-    grid-template-rows: 50% 50%;
-    padding: 0.5em;
-    border: 2px solid black;
-}
-.aside7, .aside8{
-    align-items: center;
-    padding-left: 1em;
-    overflow: hidden;
-    display: grid;
-    border: 2px solid black;
+    grid-template-rows: 47% 5% 47%;
+    grid-template-areas: 
+    "aside7"
+    "."
+    "aside8";
 }
 .aside7 {
-    max-width: 50%;
-    padding: 1rem;
-    align-self: start;
-    justify-self: left;
-    grid-template-columns: 70% 30%;
+    grid-area: aside7;
+    width: 60%;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content image7";
+    overflow: auto;
+    margin-top: 0.2em;
 }
 @media (max-width: 400px) {
     .aside7 { 
-        max-width: 250px;
-        max-height: 80px;
+        width: 100%;
         font-size: 14px;
         padding: 0;
     }
 }
+.aside7 { 
+    .image7 {
+        grid-area: image7;
+        display: grid;
+         img { 
+            width: 50%;
+            border-radius: 50%;
+            align-self: center;
+        }
+    }
+    .text {
+        grid-area: content;
+        padding: 1em;
+    }
+}   
 .aside8 {
-    max-width: 60%;
-    padding: 1rem;
-    align-self: end;
-    justify-self: right;
-    grid-template-columns: 30% 70%;
+    grid-area: aside8;
+    width: 60%;
+    justify-self: end;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    grid-template-areas: "image8 content";
+    margin-bottom: 0.2em;
+    overflow: auto;
+}
+.aside8  { 
+    .image8 {
+        grid-area: image8;
+        display: grid;
+            img {
+                width: 60%;
+                border-radius: 50%;
+                align-self: center;
+                justify-self: end;
+            }
+    }
+    .text {
+        grid-area: content;
+        padding: 1em;   
+    }
 }
 @media (max-width: 400px) {
     .aside8 {
-        max-width: 250px;
-        max-height: 80px;
+        width: 100%;
         align-self: start;
         justify-self: start;
         font-size: 14px;
         padding: 0;
     }
 }
-.aside7 img {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    border: none; 
-}
- 
-.aside8 img {
-    width: 110px;
-    height: auto;
-    border-radius: 50%;
-    border: none;
-}
+
 @media (max-width: 400px) {
     .aside7 img , .aside8 img {
-        width: 40px;
         align-self: start;
         margin-top: 15px;
     }
@@ -172,6 +194,7 @@
     display: grid;
     grid-template-columns: 49.5% 49.5%;
     column-gap: 1%;    
+    overflow: auto;
     padding: 5px;
     border: 2px solid black;
 }
@@ -183,7 +206,7 @@
 .section10, .section11 {
     padding: 5px;
     display: flex;
-    overflow: hidden;
+    overflow: auto;
     border: 2px solid black;
 }
 .aside9 {
@@ -200,6 +223,24 @@
     scrollbar-width: thin; 
     border: 2px solid black;
 }
+
+.aside13 {
+    grid-area: aside13;
+    white-space: nowrap; 
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    line-height: 3em;
+}
+.scrolling {
+    position:absolute;
+	left:0;
+  	animation: scroll 10s linear 0.5s infinite;
+}
+@keyframes scroll {
+	100% { left: 100%; }  
+}
+
 @media (max-width: 400px) {
     .aside13 {
         display: none;

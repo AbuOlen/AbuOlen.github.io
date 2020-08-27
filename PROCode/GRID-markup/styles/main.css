@@ -1,12 +1,15 @@
 .container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -ms-grid;
   display: grid;
   max-width: 1200px;
+  height: calc(100vh - 60px);
   margin: 0 auto;
   -ms-grid-columns: 10% 1fr 10% 1fr 10% 10% 1fr 1fr 10% 10% 15% 15%;
       grid-template-columns: 10% 1fr 10% 1fr 10% 10% 1fr 1fr 10% 10% 15% 15%;
-  -ms-grid-rows: 100px 350px 200px 30px 150px 100px;
-      grid-template-rows: 100px 350px 200px 30px 150px 100px;
+  -ms-grid-rows: 1fr 2.5fr 2fr 0.5fr 2fr 1.5fr;
+      grid-template-rows: 1fr 2.5fr 2fr 0.5fr 2fr 1.5fr;
       grid-template-areas: "logo logo logo logo logo logo logo logo logo about about about" "article1 article1 article1 article1 article2 article2 article2 article2 article2 article2 article2 article2" "article1 article1 article1 article1 aside9 aside9 aside9 aside9 aside9 aside9 aside9 aside9" "aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13 aside13" "article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3 article3" "footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12 footer12";
   border: 1px solid red;
 }
@@ -15,8 +18,8 @@
   .container {
     -ms-grid-columns: (minmax(133px, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(133px, 1fr));
-    -ms-grid-rows: 50px 50px 200px 90px 200px 70px;
-        grid-template-rows: 50px 50px 200px 90px 200px 70px;
+    -ms-grid-rows: 1fr 1fr 3fr 1fr 2fr 1.5fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr 2fr 1.5fr;
         grid-template-areas: "logo logo logo" "about about about" "article1 article2 article2" "article1 aside9 aside9" "article3 article3 article3" "footer12 footer12 footer12";
   }
 }
@@ -28,7 +31,7 @@
   grid-area: logo;
   display: -ms-grid;
   display: grid;
-  background-color: rgba(245, 245, 101, 0.733);
+  background-color: rgba(101, 202, 248, 0.596);
   font-size: 25px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -63,7 +66,7 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: rgba(101, 202, 248, 0.596);
+  background-color: rgba(245, 245, 101, 0.733);
   font-size: 25px;
   border: 2px solid black;
 }
@@ -144,60 +147,102 @@
   grid-area: article2;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
-  padding: 0.5em;
-  border: 2px solid black;
-}
-
-.aside7, .aside8 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 1em;
-  overflow: hidden;
-  display: -ms-grid;
-  display: grid;
-  border: 2px solid black;
+  -ms-grid-rows: 47% 5% 47%;
+      grid-template-rows: 47% 5% 47%;
+      grid-template-areas: "aside7" "." "aside8";
 }
 
 .aside7 {
-  max-width: 50%;
-  padding: 1rem;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  -ms-grid-column-align: left;
-      justify-self: left;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: aside7;
+  width: 60%;
+  border: 2px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: "content image7";
+  overflow: auto;
+  margin-top: 0.2em;
 }
 
 @media (max-width: 400px) {
   .aside7 {
-    max-width: 250px;
-    max-height: 80px;
+    width: 100%;
     font-size: 14px;
     padding: 0;
   }
 }
 
+.aside7 .image7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: image7;
+  display: -ms-grid;
+  display: grid;
+}
+
+.aside7 .image7 img {
+  width: 50%;
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.aside7 .text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+  padding: 1em;
+}
+
 .aside8 {
-  max-width: 60%;
-  padding: 1rem;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  -ms-grid-column-align: right;
-      justify-self: right;
-  -ms-grid-columns: 30% 70%;
-      grid-template-columns: 30% 70%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: aside8;
+  width: 60%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  border: 2px solid black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas: "image8 content";
+  margin-bottom: 0.2em;
+  overflow: auto;
+}
+
+.aside8 .image8 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image8;
+  display: -ms-grid;
+  display: grid;
+}
+
+.aside8 .image8 img {
+  width: 60%;
+  border-radius: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.aside8 .text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
+  padding: 1em;
 }
 
 @media (max-width: 400px) {
   .aside8 {
-    max-width: 250px;
-    max-height: 80px;
+    width: 100%;
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
@@ -208,23 +253,8 @@
   }
 }
 
-.aside7 img {
-  width: 100px;
-  height: auto;
-  border-radius: 50%;
-  border: none;
-}
-
-.aside8 img {
-  width: 110px;
-  height: auto;
-  border-radius: 50%;
-  border: none;
-}
-
 @media (max-width: 400px) {
   .aside7 img, .aside8 img {
-    width: 40px;
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
@@ -243,6 +273,7 @@
       grid-template-columns: 49.5% 49.5%;
   -webkit-column-gap: 1%;
           column-gap: 1%;
+  overflow: auto;
   padding: 5px;
   border: 2px solid black;
 }
@@ -259,7 +290,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   border: 2px solid black;
 }
 
@@ -283,6 +314,37 @@
   overflow: auto;
   scrollbar-width: thin;
   border: 2px solid black;
+}
+
+.aside13 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: aside13;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  line-height: 3em;
+}
+
+.scrolling {
+  position: absolute;
+  left: 0;
+  -webkit-animation: scroll 10s linear 0.5s infinite;
+          animation: scroll 10s linear 0.5s infinite;
+}
+
+@-webkit-keyframes scroll {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes scroll {
+  100% {
+    left: 100%;
+  }
 }
 
 @media (max-width: 400px) {
