@@ -108,39 +108,6 @@ item = invoiceImp.order_item4;
 imp_exp(item.product.storage_conditions.temperature.max, item.product.expiration_period, 
   item.product.production_date, item.quantity, item.product.packaging.quantity);
 
-// if (
-//   item.product.storage_conditions.temperature.max > -5 &&
-//   item.product.expiration_period -
-//     (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-//   received += item.quantity * item.product.quantity;
-// } else {
-//   returned += item.quantity * item.product.quantity;
-// }
-
-
-
-
-// if (
-//   item.product.storage_conditions.temperature.max > -5 &&
-//   item.product.expiration_period -
-//     (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-//   received += item.quantity * item.product.quantity;
-// } else {
-//   returned += item.quantity * item.product.quantity;
-// }
-
-// item = invoiceImp.order_item4;
-
-
-// if (
-//   item.product.storage_conditions.temperature.max > -5 &&
-//   item.product.expiration_period -
-//     (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-//   received += item.quantity * item.product.quantity;
-// } else {
-//   returned += item.quantity * item.product.quantity;
-// }
-
 
 document.getElementById("imp").innerHTML = "Прийнято " + received + " од.";
 
