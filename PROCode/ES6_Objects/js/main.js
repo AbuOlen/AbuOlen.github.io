@@ -2,8 +2,10 @@ const invoiceImp = {
   order_item1: {
     product: {
       name: "milk",
-      quantity: 20,
-      type_package: "soft polyethylene",
+      packaging: {
+        quantity: 20,
+        type_package: "soft polyethylene", 
+      },
       storage_conditions: {
         temperature: {
           min: -3,
@@ -11,7 +13,7 @@ const invoiceImp = {
         },
       },
       expiration_period: 5,
-      production_date: new Date(2020, 08, 05),
+      production_date: new Date(2020, 08, 09),
     },
     quantity: 3,
   },
@@ -19,8 +21,10 @@ const invoiceImp = {
   order_item2: {
     product: {
       name: "butter",
-      quantity: 30,
-      type_package: "paper",
+      packaging: {
+        quantity: 30,
+        type_package: "paper",
+      },
       storage_conditions: {
         temperature: {
           min: -11,
@@ -36,8 +40,10 @@ const invoiceImp = {
   order_item3: {
     product: {
       name: "yogurt",
-      quantity: 6,
-      type_package: "plastic",
+      packaging: {
+        quantity: 6,
+        type_package: "plastic",
+      },
       storage_conditions: {
         temperature: {
           min: -3,
@@ -45,7 +51,7 @@ const invoiceImp = {
         },
       },
       expiration_period: 7,
-      production_date: new Date(2020, 08, 03),
+      production_date: new Date(2020, 08, 09),
     },
     quantity: 7,
   },
@@ -53,8 +59,10 @@ const invoiceImp = {
   order_item4: {
     product: {
       name: "ice_cream",
-      quantity: 12,
-      type_package: "waffle",
+      packaging: {
+        quantity: 12,
+        type_package: "waffle",
+      },
       storage_conditions: {
         temperature: {
           min: -30,
@@ -72,53 +80,66 @@ const invoiceImp = {
 let today = new Date();   
 let received = 0;
 let returned = 0;
+
+function imp_exp(tempMax, expPeriod, prodDate, quantity, prodQuantity) {
+  if (
+    tempMax > -5 &&
+    expPeriod - (today - prodDate) / (1000 * 60 * 60 * 24) > 2
+  ) {
+    received += quantity * prodQuantity;
+  } else {
+    returned += quantity * prodQuantity;
+  }
+};
+
 let item = invoiceImp.order_item1;
-
-
-if (
-  item.product.storage_conditions.temperature.max > -5 &&
-  item.product.expiration_period -
-    (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-  received += item.quantity * item.product.quantity;
-} else {
-  returned += item.quantity * item.product.quantity;
-}
+imp_exp(item.product.storage_conditions.temperature.max, item.product.expiration_period, 
+  item.product.production_date, item.quantity, item.product.packaging.quantity);
 
 item = invoiceImp.order_item2;
-
-
-if (
-  item.product.storage_conditions.temperature.max > -5 &&
-  item.product.expiration_period -
-    (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-  received += item.quantity * item.product.quantity;
-} else {
-  returned += item.quantity * item.product.quantity;
-}
+imp_exp(item.product.storage_conditions.temperature.max, item.product.expiration_period, 
+  item.product.production_date, item.quantity, item.product.packaging.quantity);
 
 item = invoiceImp.order_item3;
-
-
-if (
-  item.product.storage_conditions.temperature.max > -5 &&
-  item.product.expiration_period -
-    (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-  received += item.quantity * item.product.quantity;
-} else {
-  returned += item.quantity * item.product.quantity;
-}
+imp_exp(item.product.storage_conditions.temperature.max, item.product.expiration_period, 
+  item.product.production_date, item.quantity, item.product.packaging.quantity);
 
 item = invoiceImp.order_item4;
+imp_exp(item.product.storage_conditions.temperature.max, item.product.expiration_period, 
+  item.product.production_date, item.quantity, item.product.packaging.quantity);
+
+// if (
+//   item.product.storage_conditions.temperature.max > -5 &&
+//   item.product.expiration_period -
+//     (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
+//   received += item.quantity * item.product.quantity;
+// } else {
+//   returned += item.quantity * item.product.quantity;
+// }
 
 
-if (
-  item.product.storage_conditions.temperature.max > -5 &&
-  item.product.expiration_period -
-    (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
-  received += item.quantity * item.product.quantity;
-} else {
-  returned += item.quantity * item.product.quantity;
-}
+
+
+// if (
+//   item.product.storage_conditions.temperature.max > -5 &&
+//   item.product.expiration_period -
+//     (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
+//   received += item.quantity * item.product.quantity;
+// } else {
+//   returned += item.quantity * item.product.quantity;
+// }
+
+// item = invoiceImp.order_item4;
+
+
+// if (
+//   item.product.storage_conditions.temperature.max > -5 &&
+//   item.product.expiration_period -
+//     (today - item.product.production_date) / (1000 * 60 * 60 * 24) >2) {
+//   received += item.quantity * item.product.quantity;
+// } else {
+//   returned += item.quantity * item.product.quantity;
+// }
 
 
 document.getElementById("imp").innerHTML = "Прийнято " + received + " од.";
