@@ -1,4 +1,4 @@
-let fib1 = 1;
+let fib1 = 0;
 let fib2 = 1;
 let iter = 0;
 
