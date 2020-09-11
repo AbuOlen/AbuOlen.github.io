@@ -76,10 +76,12 @@ const invoiceImp = {
   },
 };
 
+const invoiceExp = {};
 
 let today = new Date();   
 let received = 0;
 let returned = 0;
+let propName = 0;
 
 function imp_exp(tempMax, expPeriod, prodDate, quantity, prodQuantity) {
   if (
@@ -89,6 +91,8 @@ function imp_exp(tempMax, expPeriod, prodDate, quantity, prodQuantity) {
     received += quantity * prodQuantity;
   } else {
     returned += quantity * prodQuantity;
+    invoiceExp[propName] = item;
+    propName++;
   }
 };
 
@@ -108,6 +112,7 @@ item = invoiceImp.order_item4;
 imp_exp(item.product.storage_conditions.temperature.max, item.product.expiration_period, 
   item.product.production_date, item.quantity, item.product.packaging.quantity);
 
+console.log(invoiceExp);
 
 document.getElementById("imp").innerHTML = "Прийнято " + received + " од.";
 
