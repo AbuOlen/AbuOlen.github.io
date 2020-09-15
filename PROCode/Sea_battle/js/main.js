@@ -6,16 +6,13 @@ class Warship {
     this.Team_name = Team_name;
   }
   shoot(warship) {
-    if (Math.floor(Math.random() * 100) < 20) {
-      warship.Health_points -= this.Damage;
-      console.log(this.Team_name + " hit " + warship.Team_name + " with damage " + this.Damage);
+      let damage = Math.floor((Math.random()*40 + 80)/100*this.Damage); 
+      warship.Health_points -= damage;
+      console.log(this.Team_name + " hit " + warship.Team_name + " with damage " + damage);
       if(warship.Health_points <= 0) {
         warship.is_sunk = true;
         console.log(warship.Team_name + " ship sunk");
       }
-    } else {
-        console.log(this.Team_name + " miss");
-    }
   }
 }
 
