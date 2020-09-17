@@ -1,0 +1,3 @@
+
+TASK.
+The plant produces cars with the following configurations: - body color: yellow, green, red, blue, orange; - gearbox: automatic, manual; -conditioner: installed, absent; - interior finishing: leather, fabric, combined. Objective: to describe in the object all possible configurations of cars, while on each configuration indicate the format code: XXXXYZWV, where: XXXX is the serial number of the configuration, Y is the body color, Z-gearbox, W- air conditioning, V-trim.
