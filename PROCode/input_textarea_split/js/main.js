@@ -20,7 +20,7 @@ const btnFunc = () => {
             maxWord = arr[i].length;
         };
     };
-    console.log(arr[maxWordInd]);
+    console.log('MaxWord is  ' + arr[maxWordInd]);
 };
 
 let arr = str.split(" ");
