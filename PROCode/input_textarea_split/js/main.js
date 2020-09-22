@@ -1,10 +1,15 @@
-let str = document.getElementById('story').defaultValue;
+
 let btn = document.querySelector('.btnGo');
 let inpS = document.querySelector('.created');
+
+
 
 let inP = '<input  type ="text" class="input" value=""></input>';
 
 const btnFunc = () => {
+   let str = document.getElementById('story').value;
+   let arr = str.split(" ");
+
     inpS.innerHTML = '';
     for (let i = 0; i <arr.length; i++){
         inpS.innerHTML += inP;
@@ -22,7 +27,6 @@ const btnFunc = () => {
     };
     console.log('MaxWord is  ' + arr[maxWordInd]);
 };
-
-let arr = str.split(" ");
+ 
 
 btn.addEventListener('click', btnFunc);
