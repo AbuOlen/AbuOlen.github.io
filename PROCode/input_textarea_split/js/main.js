@@ -2,8 +2,6 @@
 let btn = document.querySelector('.btnGo');
 let inpS = document.querySelector('.created');
 
-
-
 let inP = '<input  type ="text" class="input" value=""></input>';
 
 const btnFunc = () => {
