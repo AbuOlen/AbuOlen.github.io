@@ -10,7 +10,7 @@ for (let i = 0; i < arr.length; i++) {
 
 
 const arr1 = arr.map((item) => item * 20);
-console.log("Data * 20:  ");
+console.log("Data * 20:  " + arr1);
 console.log(arr1);
 
 
@@ -19,7 +19,7 @@ const numPosOdd = arr.filter((item) => {
     return item;
   }
 });
-console.log("Array of positive & odd numbers: ");
+console.log("Array of positive & odd numbers: " + numPosOdd);
 console.log(numPosOdd);
 
 
@@ -27,8 +27,8 @@ let sum = 0;
 for (let i = 0; i < arr.length; i++){
     sum += arr[i] % 3;
 };
-console.log('Sum of rest:');
-console.log(sum);
+console.log('Sum of rest:' + sum);
+
 
 
 const num5 = arr.filter((item) => {
@@ -36,19 +36,19 @@ const num5 = arr.filter((item) => {
       return item;
     }
   });
-console.log("Array of multiples of 5: ");
+console.log("Array of multiples of 5: " + num5);
 console.log(num5);
 
 
 const arr2 = Array.from(arr);
 const elem1 = arr2.shift();
-console.log("Array without first element: ");
+console.log("Array without first element: " + arr2);
 console.log(arr2);
 
 
 const arr3 = Array.from(arr);
 arr3.sort((a,b) => a - b);
-console.log('Sort by ascending:');
+console.log('Sort by ascending:' + arr3);
 console.log(arr3);
 
 
