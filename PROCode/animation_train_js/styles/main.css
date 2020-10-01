@@ -1,0 +1,41 @@
+.picture_train {
+  width: 1200px;
+  height: 600px;
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  background-image: url(../images/landscape.jpg);
+  background-size: contain;
+}
+#train {
+  position: relative;
+  left: 400px;
+  top: 350px;
+  background-image: url(../images/kindpng_2141489.png);
+  width: 643px;
+  height: 200px;
+  background-size: contain;
+  z-index: 100;
+}
+
+.train-right {
+    transform: rotateY(180deg);
+}
+.buttons {
+  width: 1200px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+.btn {
+  width: 150px;
+  height: 40px;
+  user-select: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
