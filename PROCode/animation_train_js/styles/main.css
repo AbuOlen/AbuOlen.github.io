@@ -16,10 +16,31 @@
   height: 200px;
   background-size: contain;
   z-index: 100;
+  transition: 0.5s all;
 }
+#searchlight {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-left: 70px solid rgba(251, 255, 0, 0.986);
+    border-bottom: 30px solid transparent;
+    z-index: 50;
+    position: relative;
+    top: 30px;
+    left:-20px;
+    transition: 0.1s all;
+    opacity: 0.7;
+  }
 
 .train-right {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.light-off {
+    visibility: hidden;
+}
+.light-on {
+    visibility: visible;
 }
 .buttons {
   width: 1200px;
@@ -39,3 +60,8 @@
   border: 1px solid black;
   text-align: center;
 }
+.btn:active {
+    background-image: linear-gradient(to right, #f9f7f8, #88d8b9, #e9db18ce);
+    box-shadow: 0 2px #666;
+    transform: translateY(5px);
+  }
