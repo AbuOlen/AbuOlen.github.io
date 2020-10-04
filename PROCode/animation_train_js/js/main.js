@@ -1,8 +1,16 @@
-document.onkeydown = goKey;
+document.onkeydown = keyDown;
+document.onkeyup = keyUp;
 
-let moveX = 400;
+let minX = 0;
+let maxX = 545;
 let lightX = -250;
 let headingLeft = true;
+
+const train = document.getElementById('train');
+
+const animationSpeed = 100;
+let trainMove = train.offsetLeft;
+let speedTrain = trainMove/animationSpeed;
 
 const btnLeft = document.querySelector('.btn-left');
 const btnRight = document.querySelector('.btn-right');
@@ -12,30 +20,33 @@ let searchLight = document.getElementById('searchlight');
 
 btnLight.innerHTML = 'Light Off';
 searchLight.classList.add('light-off');
+
 function moveLeft (){   
     if(!headingLeft) {
-        document.getElementById('train').classList.remove('train-right');
+        train.classList.remove('train-right');
         headingLeft = true;
-    }
-    if (moveX<5) { 
-        moveX = 0;
-    } else {
-        moveX -= 5;      
-    }
-    document.getElementById('train').style.left = moveX + "px"; 
+    };
+    trainMove = train.offsetLeft;
+    train.style.left = minX + "px";
+    speedTrain = trainMove/animationSpeed;
+    train.style.transitionDuration=(speedTrain)+'s';
 };
 
 function moveRight (){
     if(headingLeft) {
-        document.getElementById('train').classList.add('train-right');
+        train.classList.add('train-right');
         headingLeft = false;
-    }
-    if (moveX > 545) {
-        moveX = 550;
-    } else { 
-        moveX += 5;
-    }  
-    document.getElementById('train').style.left = moveX + "px";
+    };
+    trainMove = train.offsetLeft;
+    train.style.left = maxX + "px";
+    speedTrain = (maxX - trainMove)/animationSpeed;
+    train.style.transitionDuration=(speedTrain)+'s';
+};
+
+pauseTrain = () => {
+    let temp = window.getComputedStyle(train).getPropertyValue('left');
+    console.log(temp);
+    train.style.left = temp;
 };
 
 function toggleLight() {
@@ -48,9 +59,9 @@ function toggleLight() {
          searchLight.classList.remove('light-on');
          searchLight.classList.add('light-off');
      };   
-}
+};
 
-function goKey(t) {
+function keyDown(t) {
     t = t || window.event;
     switch(t.keyCode){
         case 37 : moveLeft();
@@ -61,15 +72,17 @@ function goKey(t) {
     }
 };
 
-btnLeft.addEventListener('click', (ev) => {
-    moveLeft();
-});
+function keyUp(t) {
+    t = t || window.event;
+    switch(t.keyCode) {
+        case 37 : pauseTrain();
+        break;
+        case 39 : pauseTrain();
+    }
+};
 
-btnRight.addEventListener('click', (ev) => {
-    moveRight();
-});
-
-btnLight.addEventListener('click', (ev) => {
-    toggleLight();
-});
-  
+btnLeft.addEventListener('mousedown', moveLeft);
+btnLeft.addEventListener('mouseup', pauseTrain);
+btnRight.addEventListener('mousedown', moveRight);
+btnRight.addEventListener('mouseup', pauseTrain);
+btnLight.addEventListener('mousedown', toggleLight);
