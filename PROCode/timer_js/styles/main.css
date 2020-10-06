@@ -1,0 +1,48 @@
+@font-face {
+    src: url('../fonts/fontello.woff2');
+    font-family: "fontello_icons";
+}
+  
+.player  {
+    width: 300px;
+    height: 130px;
+    border: 1px solid grey;
+    margin: 10px;
+}
+.timer {
+    border: 1px solid grey;
+    width: 270px;
+    margin: 10px auto;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+.player:focus-within .timer::after { 
+    font-family: "fontello_icons";
+    content: '\e832'; 
+} 
+.player:focus-within .button_play {
+    outline:0;
+}
+input {
+    margin: .4rem 0;
+}   
+.time {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    margin: 0 15px 0 15px;
+    text-align: center;
+    top: 90px;
+    margin-left: 25px;
+}
+.button_play {
+    width: 125px;
+    height: 40px;
+    font-family: "fontello_icons";
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-left: 160px;
+    cursor: pointer;
+}
