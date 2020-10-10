@@ -62,13 +62,14 @@ function makeTableHTML(arr) {
 }
 makeTableHTML(arr);
 
-//-------------------6 task-----------
+//-------------------6, 7, 8  tasks-----------
 document.onkeydown = keyDown;
 
 const btnLeft = document.querySelector(".btn-left");
 const btnRight = document.querySelector(".btn-right");
 const btnUp = document.querySelector(".btn-up");
 const btnDown = document.querySelector(".btn-down");
+
 
 let selRow = 0;
 let selCol = 0;
@@ -81,7 +82,7 @@ function selectCell() {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       if (i == selRow && j == selCol) {
-        tab.rows[i].cells[j].classList.remove("fantom")
+        tab.rows[i].cells[j].classList.remove("fantom");
         tab.rows[i].cells[j].classList.add("selected");
         arr[i][j] = 1;
         console.table(arr);
@@ -89,11 +90,14 @@ function selectCell() {
     }
   }
 }
-function moveUp() {
+function indication() {
   tab.rows[selRow].cells[selCol].classList.remove("selected");
   cellShadow = tab.rows[selRow].cells[selCol];
   cellShadow.classList.add("fantom");
   arr[selRow][selCol] = numberShadow;
+}
+function moveUp() {
+  indication();
   if (selRow > 0) {
     selRow--;
   } else {
@@ -103,10 +107,7 @@ function moveUp() {
   calculateQuantity();
 }
 function moveDown() {
-  tab.rows[selRow].cells[selCol].classList.remove("selected");
-  cellShadow = tab.rows[selRow].cells[selCol];
-  cellShadow.classList.add("fantom");
-  arr[selRow][selCol] = numberShadow;
+  indication();
   if (selRow < 4) {
     selRow++;
   } else {
@@ -116,10 +117,7 @@ function moveDown() {
   calculateQuantity();
 }
 function moveLeft() {
-  tab.rows[selRow].cells[selCol].classList.remove("selected");
-  cellShadow = tab.rows[selRow].cells[selCol];
-  cellShadow.classList.add("fantom");
-  arr[selRow][selCol] = numberShadow;
+  indication();
   if (selCol > 0) {
     selCol--;
   } else {
@@ -129,10 +127,7 @@ function moveLeft() {
   calculateQuantity();
 }
 function moveRight() {
-  tab.rows[selRow].cells[selCol].classList.remove("selected");
-  cellShadow = tab.rows[selRow].cells[selCol];
-  cellShadow.classList.add("fantom");
-  arr[selRow][selCol] = numberShadow;
+  indication();
   if (selCol < 4) {
     selCol++;
   } else {
@@ -145,10 +140,10 @@ function moveRight() {
 selectCell();
 calculateQuantity();
 
-btnDown.addEventListener('mousedown', moveDown);
-btnUp.addEventListener('mousedown', moveUp);
-btnLeft.addEventListener('mousedown', moveLeft);
-btnRight.addEventListener('mousedown', moveRight);
+btnDown.addEventListener("mousedown", moveDown);
+btnUp.addEventListener("mousedown", moveUp);
+btnLeft.addEventListener("mousedown", moveLeft);
+btnRight.addEventListener("mousedown", moveRight);
 
 function keyDown(t) {
   t = t || window.event;
@@ -167,4 +162,3 @@ function keyDown(t) {
   }
 }
 
-//------------7 task--------------
