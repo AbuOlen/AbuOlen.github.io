@@ -1,0 +1,41 @@
+body {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: rgb(164, 243, 243);
+}
+
+.main {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+}
+.white {
+    background-color: white;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+}
+.table {
+    width: 100px;
+    height: 100px;
+    
+}
