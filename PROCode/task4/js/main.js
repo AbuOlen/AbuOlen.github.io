@@ -72,6 +72,8 @@ const btnDown = document.querySelector(".btn-down");
 
 let selRow = 0;
 let selCol = 0;
+let cellShadow = null;
+let numberShadow = 2;
 
 const tab = document.querySelector("table");
 
@@ -79,6 +81,7 @@ function selectCell() {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       if (i == selRow && j == selCol) {
+        tab.rows[i].cells[j].classList.remove("fantom")
         tab.rows[i].cells[j].classList.add("selected");
         arr[i][j] = 1;
         console.table(arr);
@@ -88,7 +91,9 @@ function selectCell() {
 }
 function moveUp() {
   tab.rows[selRow].cells[selCol].classList.remove("selected");
-  arr[selRow][selCol] = null;
+  cellShadow = tab.rows[selRow].cells[selCol];
+  cellShadow.classList.add("fantom");
+  arr[selRow][selCol] = numberShadow;
   if (selRow > 0) {
     selRow--;
   } else {
@@ -99,7 +104,9 @@ function moveUp() {
 }
 function moveDown() {
   tab.rows[selRow].cells[selCol].classList.remove("selected");
-  arr[selRow][selCol] = null;
+  cellShadow = tab.rows[selRow].cells[selCol];
+  cellShadow.classList.add("fantom");
+  arr[selRow][selCol] = numberShadow;
   if (selRow < 4) {
     selRow++;
   } else {
@@ -110,7 +117,9 @@ function moveDown() {
 }
 function moveLeft() {
   tab.rows[selRow].cells[selCol].classList.remove("selected");
-  arr[selRow][selCol] = null;
+  cellShadow = tab.rows[selRow].cells[selCol];
+  cellShadow.classList.add("fantom");
+  arr[selRow][selCol] = numberShadow;
   if (selCol > 0) {
     selCol--;
   } else {
@@ -121,7 +130,9 @@ function moveLeft() {
 }
 function moveRight() {
   tab.rows[selRow].cells[selCol].classList.remove("selected");
-  arr[selRow][selCol] = null;
+  cellShadow = tab.rows[selRow].cells[selCol];
+  cellShadow.classList.add("fantom");
+  arr[selRow][selCol] = numberShadow;
   if (selCol < 4) {
     selCol++;
   } else {
@@ -155,3 +166,5 @@ function keyDown(t) {
       moveRight();
   }
 }
+
+//------------7 task--------------
