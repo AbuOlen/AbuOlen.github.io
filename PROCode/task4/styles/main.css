@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  background-color: rgb(164, 243, 243);
+  background-color: rgb(164, 243, 243);  
 }
 
 .main {
@@ -45,10 +45,14 @@ body {
      font-size: 1em;
      border: 1px solid grey;
 }
+/* .disable{
+    cursor: not-allowed;
+    pointer-events: none;
+ } */
 .selected {
     background-color: blue;
 }
-.fantom {
+.track {
     background-color: orange;
 }
 

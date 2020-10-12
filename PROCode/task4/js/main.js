@@ -62,92 +62,123 @@ function makeTableHTML(arr) {
 }
 makeTableHTML(arr);
 
-//-------------------6, 7, 8  tasks-----------
-document.onkeydown = keyDown;
+//-------------------6, 7, 8  tasks  -----------
+
 
 const btnLeft = document.querySelector(".btn-left");
 const btnRight = document.querySelector(".btn-right");
 const btnUp = document.querySelector(".btn-up");
 const btnDown = document.querySelector(".btn-down");
 
-
 let selRow = 0;
 let selCol = 0;
-let cellShadow = null;
-let numberShadow = 2;
-
 const tab = document.querySelector("table");
-
 function selectCell() {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       if (i == selRow && j == selCol) {
-        tab.rows[i].cells[j].classList.remove("fantom");
+        tab.rows[i].cells[j].classList.remove("track");
         tab.rows[i].cells[j].classList.add("selected");
         arr[i][j] = 1;
         console.table(arr);
       }
     }
   }
-}
-function indication() {
+};
+
+let cellTrack = null;
+let numberTrack = 2;
+function setCellColor() {
   tab.rows[selRow].cells[selCol].classList.remove("selected");
-  cellShadow = tab.rows[selRow].cells[selCol];
-  cellShadow.classList.add("fantom");
-  arr[selRow][selCol] = numberShadow;
-}
-function moveUp() {
-  indication();
-  if (selRow > 0) {
-    selRow--;
-  } else {
-    selRow = 0;
-  }
-  selectCell();
-  calculateQuantity();
-}
-function moveDown() {
-  indication();
-  if (selRow < 4) {
-    selRow++;
-  } else {
-    selRow = 4;
-  }
-  selectCell();
-  calculateQuantity();
-}
-function moveLeft() {
-  indication();
-  if (selCol > 0) {
-    selCol--;
-  } else {
-    selCol = 0;
-  }
-  selectCell();
-  calculateQuantity();
-}
-function moveRight() {
-  indication();
-  if (selCol < 4) {
-    selCol++;
-  } else {
-    selCol = 4;
-  }
-  selectCell();
-  calculateQuantity();
-}
+  cellTrack = tab.rows[selRow].cells[selCol];
+  cellTrack.classList.add("track");
+  arr[selRow][selCol] = numberTrack;
+};
 
-selectCell();
-calculateQuantity();
+let x = 0;
+let y = 0;
+let disableUp = false;
+let disableDown = false;
+let disableLeft = false;
+let disableRight = false;
+function updateButtonState(x, y) {
+    btnUp.disabled = x == 0 || disableUp;
+    btnDown.disabled = x == 4 || disableDown;
+    btnLeft.disabled = y == 0 || disableLeft;
+    btnRight.disabled = y == 4 || disableRight;
+};
 
-btnDown.addEventListener("mousedown", moveDown);
-btnUp.addEventListener("mousedown", moveUp);
-btnLeft.addEventListener("mousedown", moveLeft);
-btnRight.addEventListener("mousedown", moveRight);
+function incSel(cur) {
+    if (cur < 4) {
+        cur++;
+      } else {
+        cur = 4;
+      }   
+      return cur;
+};
 
-function keyDown(t) {
-  t = t || window.event;
-  switch (t.keyCode) {
+function decSel(cur) {
+    if (cur > 0) {
+        cur--;
+      } else {
+        cur = 0;
+      }
+      return cur;
+};
+
+function doMove(isRow, isInc) {
+    setCellColor();
+    let tmpRow = selRow;
+    let tmpCol = selCol;
+    if(!isRow) {
+        if(isInc) {
+            tmpRow = incSel(tmpRow);
+        } else {
+            tmpRow = decSel(tmpRow);
+        }
+    } else {
+        if(isInc) {
+            tmpCol = incSel(tmpCol);
+        } else {
+            tmpCol = decSel(tmpCol);
+        }
+    }
+    if(arr[tmpRow][tmpCol] != numberTrack) {
+        selRow = tmpRow;
+        selCol = tmpCol;
+    } else {
+        if(!isRow) {
+            if(isInc) {
+                disableDown = true;
+            } else {
+                disableUp = true;
+            }
+        } else {
+            if(isInc) {
+                disableRight = true;
+            } else {
+                disableLeft = true;
+            }
+        }
+    }
+    selectCell();
+    calculateQuantity();
+    updateButtonState(selRow, selCol);
+};
+
+const moveUp = () => doMove(false, false);
+
+const moveDown = () => doMove(false, true);
+
+const moveLeft = () => doMove(true, false);
+
+const moveRight = () => doMove(true, true);
+
+
+
+function handleKeyboard(e) {
+  e = e || window.event;
+  switch (e.keyCode) {
     case 38:
       moveUp();
       break;
@@ -160,5 +191,17 @@ function keyDown(t) {
     case 39:
       moveRight();
   }
-}
+};
+
+selectCell();
+calculateQuantity();
+updateButtonState(selRow, selCol);
+
+btnDown.addEventListener("mousedown", moveDown);
+btnUp.addEventListener("mousedown", moveUp);
+btnLeft.addEventListener("mousedown", moveLeft);
+btnRight.addEventListener("mousedown", moveRight);
+document.addEventListener("keydown", handleKeyboard);
+
+
 
