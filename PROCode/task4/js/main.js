@@ -147,6 +147,10 @@ function doMove(isRow, isInc) {
         selRow = tmpRow;
         selCol = tmpCol;
     } else {
+      disableDown = false;
+      disableLeft = false;
+      disableRight = false;
+      disableUp = false;
         if(!isRow) {
             if(isInc) {
                 disableDown = true;
