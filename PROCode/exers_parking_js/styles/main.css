@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+div {
+    width: fit-content;
+    padding: 3px;
+    border: 1px solid gray;
+}
