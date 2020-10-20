@@ -1,7 +1,8 @@
 .main {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+
     margin-top: 50px;
   }
 .table {
@@ -31,4 +32,13 @@
     margin-left: 75px;
     margin-bottom: 50px;
     border: 1px solid gray;
+}
+.img0 {
+    background-image: url(../images/corner.png);
+}
+.img1 {
+    background-image: url(../images/impasse.png);
+}
+.img2 {
+    background-image: url(../images/stick.png);
 }
