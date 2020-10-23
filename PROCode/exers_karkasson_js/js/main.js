@@ -6,10 +6,10 @@ const cardTypeCount = 10;
 const typeCount = 3;
 const cardCount = cardTypeCount * typeCount;
 
+// ----create array
 const createField = () => {
   return new Array(cellRow).fill({}).map(() => new Array(cellCols).fill({}));
 };
-
 const shuffle = (a) => {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -18,6 +18,7 @@ const shuffle = (a) => {
   return a;
 };
 
+// ----- generate card & shuffle---
 const generateCards = () => {
   let cards = [];
   for (let j = 0; j < typeCount; j++) {
@@ -32,7 +33,7 @@ const generateCards = () => {
   }
   return cards;
 };
-
+//------counting the remaining cards in the deck
 const cardsInDeck = (arr) => {
   let sumPlayed = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -45,6 +46,7 @@ const cardsInDeck = (arr) => {
 //--------------------------end MODEL-------------------
 
 //--------------------------start VIEW--------------------
+
 
 const makeTableHTML = (arr, onclick) => {
   const poz = document.querySelector(".main");
@@ -60,6 +62,7 @@ const makeTableHTML = (arr, onclick) => {
   }
 };
 
+//------visualization of the number of remaining cards
 const generateInfoHTML = (field) => {
   document.querySelector(".info").innerHTML = `Left: ${cardsInDeck(field)} cards`;
 };
