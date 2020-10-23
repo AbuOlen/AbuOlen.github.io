@@ -7,7 +7,7 @@ const typeCount = 3;
 const cardCount = cardTypeCount * typeCount;
 
 const createField = () => {
-  return new Array(cellRow).fill("").map(() => new Array(cellCols).fill(""));
+  return new Array(cellRow).fill({}).map(() => new Array(cellCols).fill({}));
 };
 
 const shuffle = (a) => {
@@ -37,7 +37,7 @@ const cardsInDeck = (arr) => {
   let sumPlayed = 0;
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
-      if (arr[i][j].length !== 0) sumPlayed++;
+      if (typeof(arr[i][j].type) !== 'undefined') sumPlayed++;
     }
   }
   return cardCount - sumPlayed;
@@ -96,11 +96,17 @@ let cards = generateCards();
 
 const doMove = (ev) => {
   let elt = field[ev.target.parentNode.rowIndex][ev.target.cellIndex];
-  if (elt.length === 0) {
+
+  if (typeof (elt.type) === 'undefined') {
     card = cards.pop();
     console.log("" + ev.target.cellIndex + " " + ev.target.parentNode.rowIndex);
-    field[ev.target.parentNode.rowIndex][ev.target.cellIndex] = "0";
+    elt["angle"] = "0";
+    elt["type"] = card.type;
+    
+    console.table(field);
+
     drawCard(ev.target, card);
+    
   } else {
       let angle = parseInt(elt);
       angle += 90;
@@ -108,15 +114,19 @@ const doMove = (ev) => {
           angle = 0;
       }
       ev.target.style.transform = `rotate(${angle}deg)`;
-      field[ev.target.parentNode.rowIndex][ev.target.cellIndex] = '' + angle;
+      (field[ev.target.parentNode.rowIndex][ev.target.cellIndex]).angle = '' + angle;
   }
+  
   generateBoxCards(cards);
   generateInfoHTML(field);
+  field[ev.target.parentNode.rowIndex][ev.target.cellIndex] = elt;
+    console.log(elt);
 };
 
 makeTableHTML(field, doMove);
 
-console.log(cards);
+console.table(cards);
+
 
 generateInfoHTML(field);
 

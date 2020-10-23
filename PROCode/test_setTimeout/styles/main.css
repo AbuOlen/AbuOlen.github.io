@@ -1,0 +1,31 @@
+.main {
+    width: 300px;
+    border: 1px solid rgb(184, 181, 181);
+}
+.group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+.btn {
+    width: 50px;
+    color: transparent;
+    border: 2px solid black;
+}
+.gray_block {
+    width: 150px;
+    height: 25px;
+    background-color: grey;
+}
+.opacity {
+    opacity: 0;
+}
+.text {
+    text-align: center;
+    color: gray;
+    font-size: 1em;
+   
+}
+
