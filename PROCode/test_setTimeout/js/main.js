@@ -29,7 +29,7 @@ const growBtn = () => {
         elem.style.height = height + 'px';
       }
     }
-    // return elem;
+    return elem;
 };
 
 //------------controller----------
@@ -63,3 +63,4 @@ const handleBtnClick = () => {
     let grayBlock = document.querySelector(".gray_block");
     grayBlock.classList.toggle("opacity");
 };
+
