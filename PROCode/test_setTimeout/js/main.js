@@ -39,9 +39,11 @@ const createBtns = (el, time, callback) => {
     setTimeout(() => {
         main.innerHTML += drawOneGroup();
         el = growBtn();
+        if(typeof(el) !== 'undefined') {
         el.addEventListener('click', () => {
             handleBtnClick();
         });
+    }
       if (callback) callback();
     }, time);
   };
