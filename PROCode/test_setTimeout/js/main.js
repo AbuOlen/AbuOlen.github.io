@@ -39,7 +39,9 @@ const createBtns = (el, time, callback) => {
     setTimeout(() => {
         main.innerHTML += drawOneGroup();
         el = growBtn();
-        
+        el.addEventListener('click', () => {
+            handleBtnClick();
+        });
       if (callback) callback();
     }, time);
   };
@@ -59,6 +61,3 @@ const handleBtnClick = () => {
     let grayBlock = document.querySelector(".gray_block");
     grayBlock.classList.toggle("opacity");
 };
-btn.addEventListener('click', () => {
-            handleBtnClick();
-        });

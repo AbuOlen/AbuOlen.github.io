@@ -6,10 +6,31 @@ const cardTypeCount = 10;
 const typeCount = 3;
 const cardCount = cardTypeCount * typeCount;
 
-// ----create array
-const createField = () => {
-  return new Array(cellRow).fill({}).map(() => new Array(cellCols).fill({}));
+//----create array with empty objects
+
+function createField() {
+  let arr = [];
+
+  for (let i = 0; i < cellRow; i++) {
+    arr.push([]);
+
+    arr[i].push(new Array(cellCols));
+
+    for (let j = 0; j < cellCols; j++) {
+      arr[i][j] = {};
+    }
+  }
+  return arr;
 };
+// 
+// console.log(arr);
+
+
+
+// const createField = () => {
+//   return new Array(cellRow).fill({}).map(() => new Array(cellCols).fill({}));
+// };
+
 const shuffle = (a) => {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -47,7 +68,7 @@ const cardsInDeck = (arr) => {
 
 //--------------------------start VIEW--------------------
 
-
+//----creating game field
 const makeTableHTML = (arr, onclick) => {
   const poz = document.querySelector(".main");
   const tab = document.createElement("table");
@@ -66,11 +87,12 @@ const makeTableHTML = (arr, onclick) => {
 const generateInfoHTML = (field) => {
   document.querySelector(".info").innerHTML = `Left: ${cardsInDeck(field)} cards`;
 };
-
+//draw card deck
 const generateBoxCards = (cards) => {
   card = cards[cards.length - 1];
   drawCard(document.querySelector(".box_cards"), card);
 };
+// draw card on field  
 const drawCard = (el, card) => {
   el.classList.remove("img0");
   el.classList.remove("img1");
@@ -94,45 +116,49 @@ const drawCard = (el, card) => {
 
 //--------------------start CONTROLLER------------------
 
-let field = createField();
-let cards = generateCards();
+let field = createField();     //create array with empty objects
+let cards = generateCards();   //generate card & shuffle
 
+// main
 const doMove = (ev) => {
-  let elt = field[ev.target.parentNode.rowIndex][ev.target.cellIndex];
+  let elt = field[ev.target.parentNode.rowIndex][ev.target.cellIndex]; //get active field cell
 
-  if (typeof (elt.type) === 'undefined') {
+  if (typeof (elt.type) === 'undefined') {     // put card on the cell
     card = cards.pop();
-    console.log("" + ev.target.cellIndex + " " + ev.target.parentNode.rowIndex);
-    elt["angle"] = "0";
-    elt["type"] = card.type;
-    
-    console.table(field);
 
-    drawCard(ev.target, card);
+    console.log("" + ev.target.cellIndex + " " + ev.target.parentNode.rowIndex);
+
+    elt["angle"] = "0";   //set rotation angle to 0 
+    elt["type"] = card.type;   //assigning card type to field cell
+  
+    drawCard(ev.target, card);   // draw card
     
-  } else {
-      let angle = parseInt(elt);
+  } else {                           // rotate card by 90deg
+      let angle = parseInt(elt.angle);  
       angle += 90;
       if(angle === 360) {
           angle = 0;
       }
       ev.target.style.transform = `rotate(${angle}deg)`;
-      (field[ev.target.parentNode.rowIndex][ev.target.cellIndex]).angle = '' + angle;
+      elt.angle = '' + angle;
   }
   
-  generateBoxCards(cards);
-  generateInfoHTML(field);
-  field[ev.target.parentNode.rowIndex][ev.target.cellIndex] = elt;
+  generateBoxCards(cards);   // draw card deck 
+  generateInfoHTML(field);   // visualization of the number of remaining cards
+
+    field[ev.target.parentNode.rowIndex][ev.target.cellIndex] = elt; // put cell back to the field array
     console.log(elt);
+    console.log(field);
 };
 
-makeTableHTML(field, doMove);
+makeTableHTML(field, doMove);  //creating game field
 
 console.table(cards);
 
 
-generateInfoHTML(field);
 
-generateBoxCards(cards);
+generateInfoHTML(field);   //visualization of the number of remaining cards
+
+generateBoxCards(cards);   //draw card deck
 
 //--------------end CONTROLLER---------------------------
