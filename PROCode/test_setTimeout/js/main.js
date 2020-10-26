@@ -40,8 +40,8 @@ const createBtns = (el, time, callback) => {
         main.innerHTML += drawOneGroup();
         el = growBtn();
         if(typeof(el) !== 'undefined') {
-        el.addEventListener('click', () => {
-            handleBtnClick();
+        el.addEventListener('click', (e) => {
+            handleBtnClick(e);
         });
     }
       if (callback) callback();
@@ -59,7 +59,7 @@ const createBtns = (el, time, callback) => {
 
 
 // change opacity of big gray div
-const handleBtnClick = () => {
+const handleBtnClick = (e) => {
     let grayBlock = document.querySelector(".gray_block");
     grayBlock.classList.toggle("opacity");
 };
