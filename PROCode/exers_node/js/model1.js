@@ -1,3 +1,5 @@
-const k = 10;
+// -----------1 zavdannay-------
 
-module.exports = k;
+// const k = 10;
+
+// module.exports = k;

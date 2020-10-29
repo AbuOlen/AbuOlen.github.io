@@ -1,5 +1,5 @@
 {
-  "name": "kmf-user",
+  "name": "alf",
   "version": "0.1.0",
   "private": true,
   "eslintConfig": {
@@ -20,6 +20,7 @@
     "babel-eslint": "^10.0.3"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
     "moment": "^2.29.1",
     "request": "^2.88.2"
   }

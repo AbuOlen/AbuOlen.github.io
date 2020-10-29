@@ -1,14 +1,15 @@
-const model = require('./model1');
+// -------------1 zavdannya
 
-const controller = require('./controller1');
+// const model = require('./model1');
 
-console.log(model);
-console.log(controller.saySome);
+// const controller = require('./controller1');
+
+// console.log(model);
+// console.log(controller.saySome);
 
 
 
-
-
+// -----------------------------
 
 // const moment = require('moment');
 // const show = require('./model1');
