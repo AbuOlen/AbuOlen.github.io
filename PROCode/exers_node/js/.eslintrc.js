@@ -70,5 +70,8 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': [
       'off',
     ],
+    'no-plusplus': [
+      2, { allowForLoopAfterthoughts: true }
+    ],
   },
 };
