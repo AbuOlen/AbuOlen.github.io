@@ -1,0 +1,11 @@
+.button_play {
+  width: 125px;
+  height: 42px;
+  font-size: 1.5em;
+  font-weight: bolder;
+  font-family: "fontello_icons";
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-left: 190px;
+  cursor: pointer;
+}
